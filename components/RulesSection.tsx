@@ -224,8 +224,8 @@ const NoviceRules = () => {
             <div className="space-y-8 text-lg text-gray-700 relative z-10">
                 <p><span className="font-bold bg-black text-white px-3 py-1 text-sm uppercase mr-3 align-middle">Format</span> {t.rules.noviceSpeed.format}</p>
                 <div className="pl-6 border-l-4 border-tko-yellow space-y-4">
-                    <p><strong>海選：</strong>{t.rules.noviceSpeed.qualifiers}</p>
-                    <p><strong>決賽：</strong>{t.rules.noviceSpeed.finals}</p>
+                    <p><strong>{t.rules.noviceSpeed.qualifiersLabel}</strong>{t.rules.noviceSpeed.qualifiers}</p>
+                    <p><strong>{t.rules.noviceSpeed.finalsLabel}</strong>{t.rules.noviceSpeed.finals}</p>
                 </div>
                 
                 <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -267,8 +267,8 @@ const NoviceRules = () => {
             <div className="space-y-8 text-lg text-gray-700 relative z-10">
                 <p><span className="font-bold bg-black text-white px-3 py-1 text-sm uppercase mr-3 align-middle">Format</span> {t.rules.noviceDesignated.format}</p>
                 <div className="pl-6 border-l-4 border-tko-green space-y-4">
-                    <p><strong>規則：</strong>{t.rules.noviceDesignated.rules}</p>
-                    <p><strong>決賽：</strong>{t.rules.noviceDesignated.finals}</p>
+                    <p><strong>{t.rules.noviceDesignated.rulesLabel}</strong>{t.rules.noviceDesignated.rules}</p>
+                    <p><strong>{t.rules.noviceDesignated.finalsLabel}</strong>{t.rules.noviceDesignated.finals}</p>
                 </div>
 
                  <details className="mt-10 bg-gray-50 p-8 border border-gray-200 cursor-pointer group transition-colors hover:bg-gray-100" open>
