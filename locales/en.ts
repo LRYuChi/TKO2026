@@ -228,7 +228,37 @@ export const en = {
       advancedGroup: 'Intermediate',
       challengeGroup: 'Expert',
       videoAdvanced: 'Intermediate Open Demo',
-      videoChallenge: 'Expert Open Demo'
+      videoChallenge: 'Expert Open Demo',
+      advancedTricks: [
+        'Switch Stuntplane Fasthands',
+        'Around Bird',
+        '2 Turns Jumping Stick Swap Downspike Fasthand',
+        'Mooncircle Ghost Lighthouse, In',
+        'Stilt, Over The Valley, Flip In',
+        'Inward 1 Turn Lunar, Inward Lunar Flip, Inward Flip In',
+        'Sara Handlestall, Spike',
+        'Around Danmark',
+        'Double Whirlwind',
+        'Swap 2 Turns Lighthouse, 1.5 Cush in',
+        '▲ Airplane, Tap Inward Flip In, Flip Cush In',
+        '▲ Candlestick Flip, Trade Ken Grip Spike',
+        '▲ Gunslinger, Late Gunslinger Spike'
+      ],
+      challengeTricks: [
+        'Triple Jumping Stick',
+        'Inward Lunar, 3 Tap Flip Inward Lunar, Trade Spike',
+        '2 Turns Swing Double Gunslinger Throw 1.5 in',
+        'Switch Whirlwind',
+        'Inward Juggle Ghost Juggle Juggle Spike',
+        'Handle, Ring, Bird, Nightingale, Spike',
+        'Inward Stilt, Inward Stilt Back Flip, Trade Spike',
+        'Tap Flip in, Forward Tap Flip In',
+        '1 Turn Stuntplane, Stunt Flip Fasthand',
+        '1 Turn Lighthouse, Inward Lighthouse Flip Insta Juggle Lighthouse Insta Inward Flip in',
+        '▲ Gunslinger Juggle Gunslinger Spike',
+        '▲ Double Kenflip Juggle 2 Tap Juggle Spike',
+        '▲ Lunar, 123 Lunar Flip, in'
+      ]
     },
     kenGame: {
       title: 'Ken Game Open',
@@ -248,25 +278,25 @@ export const en = {
       title: 'Freestyle BATTLE',
       subtitle: 'Open / PRO Division',
       scoring: {
-        creativity: { percent: '30%', title: 'Creativity', desc: 'Originality and novelty of tricks.' },
-        flow: { percent: '40%', title: 'Flow', desc: 'Smoothness of trick connections and miss rate control.' },
-        difficulty: { percent: '30%', title: 'Difficulty', desc: 'Technical complexity and execution level.' }
+        creativity: { percent: '33%', title: 'Creativity', desc: 'Ultimate thinking and originality' },
+        flow: { percent: '33%', title: 'Flow', desc: 'Overall smoothness and fluidity' },
+        difficulty: { percent: '33%', title: 'Tech. Diff.', desc: 'Technical difficulty & execution' }
       },
       qualifiers: {
-        title: 'Qualifier Round',
+        title: 'Qualifiers',
         rules: [
-          'Each player has 60 seconds for Freestyle.',
-          'Players go on stage one at a time, scored by three judges.',
+          'Each player has <strong>60 seconds</strong> to freestyle.',
+          'Players perform one at a time, three judges score comprehensively.',
           'Top 16 scores advance to the Finals.'
         ]
       },
       finals: {
-        title: 'Final Stage',
+        title: 'Finals',
         rules: [
-          'Top 16 draw numbers to determine 1v1 battle bracket.',
-          'Each player performs two rounds, each lasting 45 seconds.',
-          'Stage divided into Blue Side and Orange Side battle areas.',
-          'Judges give overall evaluation and decide the winner directly.'
+          'The 16 finalists draw numbers for 1v1 battle matchups.',
+          'Each player performs <strong>two rounds</strong>, each lasting <strong>45 seconds</strong>.',
+          'Stage is divided into Blue Side and Orange Side battle areas.',
+          'Judges score comprehensively and directly determine the winner.'
         ]
       },
       judges: {

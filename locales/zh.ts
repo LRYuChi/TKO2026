@@ -228,7 +228,37 @@ export const zh = {
       advancedGroup: '進階組 Advanced',
       challengeGroup: '挑戰組 Challenge',
       videoAdvanced: '進階指定賽示範',
-      videoChallenge: '挑戰組指定賽示範'
+      videoChallenge: '挑戰組指定賽示範',
+      advancedTricks: [
+        '非慣用手重力機快手止劍',
+        '歐洲鶯',
+        '兩圈跳劍殺快手',
+        '圓月殺法放燈 - 收劍',
+        '竹馬渡玉 - 一迴旋收',
+        '逆一迴旋月面 - 月上月 - 逆一迴旋收',
+        '殺手中皿極意 - 收劍',
+        '丹麥一周',
+        '兩圈離轉地球',
+        '拋接二迴旋燈台 - 1.5 Cush in',
+        '▲ 飛行機 - tap 逆一迴旋 in - 一迴旋 Cush in',
+        '▲ 蠟燭 - 離轉蠟燭 - 止劍',
+        '▲ 轉劍 late 轉劍止劍'
+      ],
+      challengeTricks: [
+        '三圈跳劍',
+        '逆月面 - 3 tap 一迴旋逆月 - 止劍',
+        '拉二迴旋轉劍 兩圈 拋一迴旋飛行機',
+        '非慣用手離轉地球',
+        '逆 juggle ghost juggle 正 juggle 止劍',
+        '中皿極意 - 太陽極意 - 大鶯 - 小鶯 - 收劍',
+        '直拉夢幻小竹馬 - 夢幻馬上馬 - 抓劍收',
+        '直拉 tap 正一迴旋飛行機 - 0.5 tap 正一迴旋 in',
+        '一迴旋重力機 - 一迴旋重力機快手止劍',
+        '一迴旋燈台 - 逆燈上燈 insta juggle 燈台 insta 逆一迴旋收',
+        '▲ 轉劍 juggle 轉劍止劍',
+        '▲ 離轉 兩圈 juggle 2 tap juggle 止劍',
+        '▲ 月面 - 月上月 1 2 3 - 收劍'
+      ]
     },
     kenGame: {
       title: 'Ken Game 公開賽',
@@ -248,14 +278,14 @@ export const zh = {
       title: 'Freestyle BATTLE',
       subtitle: '公開組 / PRO組',
       scoring: {
-        creativity: { percent: '30%', title: 'Creativity 創意', desc: '招式的獨創性與新穎程度。' },
-        flow: { percent: '40%', title: 'Flow 流暢度', desc: '動作連接的順暢度與失誤率控制。' },
-        difficulty: { percent: '30%', title: 'Difficulty 難度', desc: '招式的技術含量與複雜程度。' }
+        creativity: { percent: '33%', title: 'Creativity 創意', desc: '招式的極致思考與原創' },
+        flow: { percent: '33%', title: 'Flow 流暢', desc: '整體流暢與流潤度' },
+        difficulty: { percent: '33%', title: 'Tech. Diff. 難度', desc: '技術難度、完成度' }
       },
       qualifiers: {
         title: '海選階段 Qualifiers',
         rules: [
-          '每人 60 秒 Freestyle。',
+          '每人 <strong>60 秒</strong> Freestyle。',
           '依序上台，三位裁判綜合評分。',
           '取總分最高前 16 名晉級決賽。'
         ]
@@ -264,7 +294,7 @@ export const zh = {
         title: '決賽階段 Finals',
         rules: [
           '16 強採抽籤決定 1v1 對戰組合。',
-          '雙方各進行兩輪，每輪 45 秒。',
+          '雙方各進行 <strong>兩輪</strong>，每輪 <strong>45 秒</strong>。',
           '場地分藍色與橘色對戰區。',
           '裁判綜合評分，舉旗直接判定優勝者。'
         ]

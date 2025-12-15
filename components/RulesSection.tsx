@@ -118,20 +118,19 @@ const RulesSection: React.FC = () => {
             {/* Rules Format */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 text-gray-300 mb-24 max-w-5xl mx-auto">
                 <div>
-                    <h4 className="font-bold text-white text-2xl mb-6 border-l-4 border-tko-yellow pl-4 uppercase tracking-wide">海選階段 Qualifiers</h4>
+                    <h4 className="font-bold text-white text-2xl mb-6 border-l-4 border-tko-yellow pl-4 uppercase tracking-wide">{t.rules.freestyle.qualifiers.title}</h4>
                     <ul className="text-lg space-y-4 list-disc list-inside marker:text-tko-yellow">
-                        <li>每人 <strong className="text-white">60 秒</strong> Freestyle。</li>
-                        <li>依序上台，三位裁判綜合評分。</li>
-                        <li>取總分最高前 16 名晉級決賽。</li>
+                        {t.rules.freestyle.qualifiers.rules.map((rule, index) => (
+                            <li key={index} dangerouslySetInnerHTML={{ __html: rule }} />
+                        ))}
                     </ul>
                 </div>
                 <div>
-                    <h4 className="font-bold text-white text-2xl mb-6 border-l-4 border-tko-green pl-4 uppercase tracking-wide">決賽階段 Finals</h4>
+                    <h4 className="font-bold text-white text-2xl mb-6 border-l-4 border-tko-green pl-4 uppercase tracking-wide">{t.rules.freestyle.finals.title}</h4>
                     <ul className="text-lg space-y-4 list-disc list-inside marker:text-tko-green">
-                        <li>16 強採抽籤決定 1v1 對戰組合。</li>
-                        <li>雙方各進行 <strong className="text-white">兩輪</strong>，每輪 <strong className="text-white">45 秒</strong>。</li>
-                        <li>場地分藍色與橘色對戰區。</li>
-                        <li>裁判綜合評分，舉旗直接判定優勝者。</li>
+                        {t.rules.freestyle.finals.rules.map((rule, index) => (
+                            <li key={index} dangerouslySetInnerHTML={{ __html: rule }} />
+                        ))}
                     </ul>
                 </div>
             </div>
@@ -342,19 +341,9 @@ const AdvancedRules = () => {
                         </div>
                         {/* Modified: Font size adjusted to text-lg, font-medium, leading-relaxed for elegance. Red text normalized. */}
                         <ul className="text-lg text-tko-black space-y-3 list-none font-medium leading-relaxed">
-                            <li>1. 非慣用手重力機快手止劍</li>
-                            <li>2. 歐洲鶯</li>
-                            <li>3. 兩圈跳劍殺快手</li>
-                            <li>4. 圓月殺法放燈 - 收劍</li>
-                            <li>5. 竹馬渡玉 - 一迴旋收</li>
-                            <li>6. 逆一迴旋月面 - 月上月 - 逆一迴旋收</li>
-                            <li>7. 殺手中皿極意 - 收劍</li>
-                            <li>8. 丹麥一周</li>
-                            <li>9. 兩圈離轉地球</li>
-                            <li>10. 拋接二迴旋燈台 - 1.5 Cush in</li>
-                            <li className="text-tko-red">▲ 飛行機 - tap 逆一迴旋 in - 一迴旋 Cush in</li>
-                            <li className="text-tko-red">▲ 蠟燭 - 離轉蠟燭 - 止劍</li>
-                            <li className="text-tko-red">▲ 轉劍 late 轉劍止劍</li>
+                            {t.rules.advancedDesignated.advancedTricks.map((trick, index) => (
+                                <li key={index} className={trick.includes('▲') ? 'text-tko-red' : ''}>{index + 1}. {trick}</li>
+                            ))}
                         </ul>
                  </div>
                  
@@ -366,19 +355,9 @@ const AdvancedRules = () => {
                         </div>
                         {/* Modified: Font size adjusted to text-lg, font-medium, leading-relaxed for elegance. Red text normalized. */}
                         <ul className="text-lg text-tko-black space-y-3 list-none font-medium leading-relaxed">
-                             <li>1. 三圈跳劍</li>
-                            <li>2. 逆月面 - 3 tap 一迴旋逆月 - 止劍</li>
-                            <li>3. 拉二迴旋轉劍 兩圈 拋一迴旋飛行機</li>
-                            <li>4. 非慣用手離轉地球</li>
-                            <li>5. 逆 juggle ghost juggle 正 juggle 止劍</li>
-                            <li>6. 中皿極意 - 太陽極意 - 大鶯 - 小鶯 - 收劍</li>
-                            <li>7. 直拉夢幻小竹馬 - 夢幻馬上馬 - 抓劍收</li>
-                            <li>8. 直拉 tap 正一迴旋飛行機 - 0.5 tap 正一迴旋 in</li>
-                            <li>9. 一迴旋重力機 - 一迴旋重力機快手止劍</li>
-                            <li>10. 一迴旋燈台 - 逆燈上燈 insta juggle 燈台 insta 逆一迴旋收</li>
-                            <li className="text-tko-red">▲ 轉劍 juggle 轉劍止劍</li>
-                            <li className="text-tko-red">▲ 離轉 兩圈 juggle 2 tap juggle 止劍</li>
-                            <li className="text-tko-red">▲ 月面 - 月上月 1 2 3 - 收劍</li>
+                             {t.rules.advancedDesignated.challengeTricks.map((trick, index) => (
+                                <li key={index} className={trick.includes('▲') ? 'text-tko-red' : ''}>{index + 1}. {trick}</li>
+                            ))}
                         </ul>
                  </div>
             </div>
