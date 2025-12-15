@@ -165,7 +165,19 @@ export const en = {
       noviceTitle: 'First Timer Tricks',
       beginnerTitle: 'Beginner Tricks',
       videoNovice: 'First Timer Speed Demo',
-      videoBeginner: 'Beginner Speed Demo'
+      videoBeginner: 'Beginner Speed Demo',
+      noviceTricks: [
+        'Easy Spike, Flying Top',
+        'Candlestick',
+        'Easy Big Cup, Baseball',
+        '▲ Spike'
+      ],
+      beginnerTricks: [
+        'DownSpike, Base Cup, Downspike',
+        'Lunar, In',
+        'Bird, In',
+        '▲ Easy spike, Inward Earth Turn'
+      ]
     },
     noviceDesignated: {
       title: 'Open Division',
@@ -178,7 +190,33 @@ export const en = {
       noviceGroup: 'First Timer',
       beginnerGroup: 'Beginner',
       videoNovice: 'First Timer Open Demo',
-      videoBeginner: 'Beginner Open Demo'
+      videoBeginner: 'Beginner Open Demo',
+      noviceTricks: [
+        'Switch Sara Grip Base Cup',
+        'Airplane',
+        'Spike',
+        'Big Cup, Knee Bounce Big Cup',
+        'Trapeze',
+        'Easy Spike, Flying Top',
+        'Easy Bird, Spike',
+        'Hanging Catch',
+        'Stuntplane Fasthands',
+        'Tama Cat, Spike',
+        '▲ Downspike'
+      ],
+      beginnerTricks: [
+        'Around Europe',
+        'Lunar, Flip in',
+        'Big Cup, Turntable, Spike',
+        'Airplane, Base Cup, Downspike',
+        'Nightingale, Earth Turn Spike',
+        'Pinky Spike, Spike',
+        'Scooping Goldfish, Spike',
+        'Lighthouse, Trade Spike',
+        '▲ Sara Grip Around The Block',
+        '▲ Stilt, In',
+        '▲ Inward Swing Spike, Earth Turn'
+      ]
     },
     advancedDesignated: {
       title: 'Intermediate / Expert Open Division',

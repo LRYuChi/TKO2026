@@ -235,10 +235,9 @@ const NoviceRules = () => {
                         
                         <h4 className="font-bold mb-6 text-tko-green uppercase tracking-wide text-lg border-b-2 border-gray-200 pb-2">{t.rules.noviceSpeed.noviceTitle}</h4>
                         <ol className="list-decimal list-inside text-xl space-y-4 text-tko-black font-medium leading-relaxed">
-                            <li>簡單止劍 - 螺旋丸</li>
-                            <li>蠟燭</li>
-                            <li>簡單大皿 - 棒球接中皿</li>
-                            <li className="text-tko-red">▲ 止劍</li>
+                            {t.rules.noviceSpeed.noviceTricks.map((trick, index) => (
+                                <li key={index} className={trick.includes('▲') ? 'text-tko-red' : ''}>{trick}</li>
+                            ))}
                         </ol>
                     </div>
                      <div>
@@ -247,10 +246,9 @@ const NoviceRules = () => {
 
                         <h4 className="font-bold mb-6 text-tko-green uppercase tracking-wide text-lg border-b-2 border-gray-200 pb-2">{t.rules.noviceSpeed.beginnerTitle}</h4>
                         <ol className="list-decimal list-inside text-xl space-y-4 text-tko-black font-medium leading-relaxed">
-                            <li>天地二段</li>
-                            <li>直拉月面 - 收劍</li>
-                            <li>大鶯 - 收劍</li>
-                            <li className="text-tko-red">▲ 簡單止劍 - 逆地球</li>
+                            {t.rules.noviceSpeed.beginnerTricks.map((trick, index) => (
+                                <li key={index} className={trick.includes('▲') ? 'text-tko-red' : ''}>{trick}</li>
+                            ))}
                         </ol>
                     </div>
                 </div>
@@ -282,17 +280,9 @@ const NoviceRules = () => {
 
                              <p className="font-bold mb-4 text-tko-green text-xl">{t.rules.noviceDesignated.noviceGroup}</p>
                              <ul className="list-none text-tko-black space-y-3 text-lg font-medium leading-relaxed">
-                                <li>• 非慣用手殺手中皿</li>
-                                <li>• 飛行機</li>
-                                <li>• 止劍</li>
-                                <li>• 大皿 - 膝蓋大皿</li>
-                                <li>• 空中飛人</li>
-                                <li>• 簡單止劍 - 螺旋丸止劍</li>
-                                <li>• 簡單大鶯 - 收劍</li>
-                                <li>• (止劍狀態) 抽線接劍</li>
-                                <li>• 重力機快手止劍</li>
-                                <li>• 招財貓收劍</li>
-                                <li className="text-tko-red font-medium">• ▲ 天中殺</li>
+                                {t.rules.noviceDesignated.noviceTricks.map((trick, index) => (
+                                    <li key={index} className={trick.includes('▲') ? 'text-tko-red font-medium' : ''}>• {trick}</li>
+                                ))}
                              </ul>
                         </div>
                         <div>
@@ -301,17 +291,9 @@ const NoviceRules = () => {
 
                              <p className="font-bold mb-4 text-tko-green text-xl">{t.rules.noviceDesignated.beginnerGroup}</p>
                              <ul className="list-none text-tko-black space-y-3 text-lg font-medium leading-relaxed">
-                                <li>• 歐洲一周</li>
-                                <li>• 月面 - 一迴旋收</li>
-                                <li>• 大皿 - 茶壺 - 收劍</li>
-                                <li>• 飛行機 - 中皿 - 天中殺</li>
-                                <li>• 小鶯 - 地球收</li>
-                                <li>• 小指止劍 - 收劍</li>
-                                <li>• 大皿撈金魚 - 收劍</li>
-                                <li>• 燈台 - 抓劍收</li>
-                                <li className="text-tko-red font-medium">• ▲ 殺手手勢皿一周(免收)</li>
-                                <li className="text-tko-red font-medium">• ▲ 竹馬 - 收劍</li>
-                                <li className="text-tko-red font-medium">• ▲ 逆飛行球 - 地球</li>
+                                {t.rules.noviceDesignated.beginnerTricks.map((trick, index) => (
+                                    <li key={index} className={trick.includes('▲') ? 'text-tko-red font-medium' : ''}>• {trick}</li>
+                                ))}
                              </ul>
                         </div>
                     </div>

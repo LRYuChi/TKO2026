@@ -165,7 +165,19 @@ export const zh = {
       noviceTitle: '新手組招式',
       beginnerTitle: '初階組招式',
       videoNovice: '新手速度賽示範',
-      videoBeginner: '初階速度賽示範'
+      videoBeginner: '初階速度賽示範',
+      noviceTricks: [
+        '簡單止劍 - 螺旋丸',
+        '蠟燭',
+        '簡單大皿 - 棒球接中皿',
+        '▲ 止劍'
+      ],
+      beginnerTricks: [
+        '天地二段',
+        '直拉月面 - 收劍',
+        '大鶯 - 收劍',
+        '▲ 簡單止劍 - 逆地球'
+      ]
     },
     noviceDesignated: {
       title: '指定賽 (OPEN)',
@@ -178,7 +190,33 @@ export const zh = {
       noviceGroup: '新手組',
       beginnerGroup: '初階組',
       videoNovice: '新手指定賽示範',
-      videoBeginner: '初階指定賽示範'
+      videoBeginner: '初階指定賽示範',
+      noviceTricks: [
+        '非慣用手殺手中皿',
+        '飛行機',
+        '止劍',
+        '大皿 - 膝蓋大皿',
+        '空中飛人',
+        '簡單止劍 - 螺旋丸止劍',
+        '簡單大鶯 - 收劍',
+        '(止劍狀態) 抽線接劍',
+        '重力機快手止劍',
+        '招財貓收劍',
+        '▲ 天中殺'
+      ],
+      beginnerTricks: [
+        '歐洲一周',
+        '月面 - 一迴旋收',
+        '大皿 - 茶壺 - 收劍',
+        '飛行機 - 中皿 - 天中殺',
+        '小鶯 - 地球收',
+        '小指止劍 - 收劍',
+        '大皿撈金魚 - 收劍',
+        '燈台 - 抓劍收',
+        '▲ 殺手手勢皿一周(免收)',
+        '▲ 竹馬 - 收劍',
+        '▲ 逆飛行球 - 地球'
+      ]
     },
     advancedDesignated: {
       title: '進階/挑戰組 指定賽',
