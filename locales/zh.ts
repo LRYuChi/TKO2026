@@ -100,7 +100,37 @@ export const zh = {
       discount: {
         title: '學生優惠',
         content: '報到時出示有效學生證，可享 NT$ 500 折扣。'
-      }
+      },
+      packages: {
+        valuePack: {
+          label: 'Value Pack',
+          title: '比賽 + 毛巾/衣服',
+          comingSoon: 'Coming Soon',
+          priceTbd: 'Price TBD',
+          mostPopular: 'Most Popular',
+          items: [
+            '包含所有基本方案內容',
+            'TKO 限定運動毛巾',
+            '或 紀念T-shirt (二擇一)'
+          ],
+          button: '即將開放'
+        },
+        fullGear: {
+          label: 'Full Gear',
+          title: '大全配',
+          comingSoon: 'Coming Soon',
+          priceTbd: 'Price TBD',
+          items: [
+            '包含所有基本方案內容',
+            'TKO 限定運動毛巾',
+            'TKO 紀念T-shirt',
+            '最完整的賽事紀念'
+          ],
+          button: '即將開放'
+        }
+      },
+      notes: '＊各組別說明：新手、初階、進階、挑戰組不可重複報名。',
+      proNote: 'Freestyle PRO 組如人數不足 8 位，則取消 PRO 組，並編列進公開組一起比賽。'
     }
   },
   rules: {

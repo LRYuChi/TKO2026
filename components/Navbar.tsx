@@ -89,7 +89,7 @@ const Navbar: React.FC = () => {
               title="Switch Language"
             >
               <Globe size={16} />
-              <span>{language === 'zh' ? 'EN' : '中'}</span>
+              <span>{language === 'zh' ? 'EN' : '華'}</span>
             </button>
             
             <a

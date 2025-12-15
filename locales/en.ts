@@ -100,7 +100,37 @@ export const en = {
       discount: {
         title: 'Student Discount',
         content: 'Students who present a valid student ID at check-in will receive a NT$ 500 discount.'
-      }
+      },
+      packages: {
+        valuePack: {
+          label: 'Value Pack',
+          title: 'Competition + Towel/Apparel',
+          comingSoon: 'Coming Soon',
+          priceTbd: 'Price TBD',
+          mostPopular: 'Most Popular',
+          items: [
+            'Includes all basic package contents',
+            'TKO Limited Edition Sports Towel',
+            'Or Commemorative T-shirt (Choose One)'
+          ],
+          button: 'Coming Soon'
+        },
+        fullGear: {
+          label: 'Full Gear',
+          title: 'Full Package',
+          comingSoon: 'Coming Soon',
+          priceTbd: 'Price TBD',
+          items: [
+            'Includes all basic package contents',
+            'TKO Limited Edition Sports Towel',
+            'TKO Commemorative T-shirt',
+            'Most complete event memorabilia'
+          ],
+          button: 'Coming Soon'
+        }
+      },
+      notes: '* Division Guidelines: Players may only register for one of First Timer, Beginner, Intermediate, or Expert.',
+      proNote: 'If the Freestyle PRO Division has fewer than 8 registrants, the PRO Division will be cancelled and merged into the Open Division.'
     }
   },
   rules: {
