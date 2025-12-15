@@ -29,7 +29,7 @@ const Navbar: React.FC = () => {
     { name: '活動介紹', id: 'details' },
     { name: '報名資訊', id: 'registration' },
     { name: '賽制規則', id: 'rules' },
-    { name: '活動賽程', id: 'schedule' },
+    // { name: '活動賽程', id: 'schedule' },
   ];
 
   return (
