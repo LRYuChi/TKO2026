@@ -16,7 +16,7 @@ const App: React.FC = () => {
         <EventDetails />
         <Registration />
         <RulesSection />
-        <Schedule />
+        {/* <Schedule /> */}
       </main>
       <Footer />
     </div>
