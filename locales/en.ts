@@ -125,6 +125,53 @@ export const en = {
       advanced: 'Intermediate / Expert',
       ken: 'Ken Game'
     },
+    noviceSpeed: {
+      title: 'Speed Division',
+      format: 'Top 3 + Fastest Qualifier Award',
+      qualifiers: 'Qualifiers: Draw the number of required completions for each trick, players perform tricks in turn, 2-minute time limit. Top 5 fastest advance.',
+      finals: 'Finals: Add ▲ symbol trick as the final trick. Top 5 race on stage, top 2 advance to Championship. Championship players race back-to-back.',
+      noviceTitle: 'First Timer Tricks',
+      beginnerTitle: 'Beginner Tricks',
+      videoNovice: 'First Timer Speed Demo',
+      videoBeginner: 'Beginner Speed Demo'
+    },
+    noviceDesignated: {
+      title: 'Open Division',
+      format: '1 vs 1 Battle (Qualifier Bracket)',
+      rules: 'Rules: Moshi-kiri determines order. Process: A chooses trick, A attempts (3 tries), if A lands and B does not, A scores 1 point; if both land or both miss, switch to B choosing. First to 3 points wins.',
+      finals: 'Finals: Add ▲ symbol tricks (First Timer 10 tricks / Beginner 12 tricks). Championship is first to 5 points.',
+      trickList: 'Open Division Trick List (click to collapse)',
+      noviceGroup: 'First Timer',
+      beginnerGroup: 'Beginner',
+      videoNovice: 'First Timer Open Demo',
+      videoBeginner: 'Beginner Open Demo'
+    },
+    advancedDesignated: {
+      title: 'Intermediate / Expert Open Division',
+      format: 'Format',
+      formatDesc: '1 vs 1 Battle. Multiple qualifier brackets run simultaneously. Moshi-kiri determines order, winner draws a trick from the organizer\'s designated trick list. Same rules as Beginner: 3 attempts, first to land scores. First to 3 points wins. If all tricks are drawn and tied, redraw all tricks, first to score 1 point wins.',
+      finals: 'Finals Stage',
+      finalsDesc: 'Add ▲ symbol tricks (Intermediate 13 tricks / Expert 13 tricks total).',
+      finalScore: 'Championship match is first to 5 points.',
+      advancedGroup: 'Intermediate',
+      challengeGroup: 'Expert',
+      videoAdvanced: 'Intermediate Open Demo',
+      videoChallenge: 'Expert Open Demo'
+    },
+    kenGame: {
+      title: 'Ken Game Open',
+      basicRules: 'Basic Rules',
+      format: 'Format:',
+      formatDesc: '1 vs 1 Bracket Battle.',
+      start: 'Start:',
+      startDesc: 'Moshi-kiri determines who goes first.',
+      attDef: 'Att/Def:',
+      attDefDesc: 'Each player has one attack opportunity and two defense attempts.',
+      winCondition: 'First player to receive "K", "E", "N" letters loses.',
+      proveIt: 'Prove it! Rule',
+      proveItDesc1: 'When A is at match point, if B fails both defense attempts, B may call "Prove it!" (once only) or take a third attempt.',
+      proveItDesc2: 'If "Prove it!" is called, A must re-attempt the trick. If A lands, A wins; if A fails, no points are awarded and B goes on offense.'
+    },
     freestyle: {
       title: 'Freestyle BATTLE',
       subtitle: 'Open / PRO Division',

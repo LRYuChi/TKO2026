@@ -125,6 +125,53 @@ export const zh = {
       advanced: '進階/挑戰組',
       ken: 'Ken Game'
     },
+    noviceSpeed: {
+      title: '速度賽 (Speed)',
+      format: '取前三名 + 海選最速獎',
+      qualifiers: '海選：抽出「每招需成功次數」，選手依序做招，限時 2 分鐘。取用時最短前五名。',
+      finals: '決賽：加入「▲ 符號招式」為最後一招。五強上台競速，前兩名進冠亞。冠亞背對背競速。',
+      noviceTitle: '新手組招式',
+      beginnerTitle: '初階組招式',
+      videoNovice: '新手速度賽示範',
+      videoBeginner: '初階速度賽示範'
+    },
+    noviceDesignated: {
+      title: '指定賽 (OPEN)',
+      format: '1 對 1 對戰 (海選樹狀圖)',
+      rules: '規則：轉劍玉決定先後。流程為：A選招，A進行(3次機會)，若A成功且B失敗則A得1分；皆成功或皆失敗則輪換B選招。先得3分者勝出。',
+      finals: '決賽：加入「▲ 符號」招式 (新手10招/初階12招)。冠亞賽先得5分勝。',
+      trickList: '指定賽招式列表 (點擊收合)',
+      noviceGroup: '新手組',
+      beginnerGroup: '初階組',
+      videoNovice: '新手指定賽示範',
+      videoBeginner: '初階指定賽示範'
+    },
+    advancedDesignated: {
+      title: '進階/挑戰組 指定賽',
+      format: '賽制流程',
+      formatDesc: '1 對 1 對戰。海選多組同時進行。轉劍玉決定先後，優先者從主辦方指定招式中抽一招。規則同初階組：三次機會，先成功者得分。先得 3 分勝出。若招式抽完平手，全部重抽，先得1分勝。',
+      finals: '決賽階段 (Finals)',
+      finalsDesc: '需加入 ▲ 符號招式 (總共進階13招/挑戰13招)。',
+      finalScore: '冠亞軍決賽賽制為先獲得 5 分 勝出。',
+      advancedGroup: '進階組 Advanced',
+      challengeGroup: '挑戰組 Challenge',
+      videoAdvanced: '進階指定賽示範',
+      videoChallenge: '挑戰組指定賽示範'
+    },
+    kenGame: {
+      title: 'Ken Game 公開賽',
+      basicRules: '基本規則',
+      format: 'Format:',
+      formatDesc: '1 v 1 樹狀圖對戰。',
+      start: 'Start:',
+      startDesc: '轉劍玉決定誰先出招。',
+      attDef: 'Att/Def:',
+      attDefDesc: '每人有一次出招機會、兩次跟招機會。',
+      winCondition: '先拿到 "K"、"E"、"N" 三個字母的選手落敗。',
+      proveIt: 'Prove it! Rule',
+      proveItDesc1: '當 A 賽點時，B 兩次跟招皆失敗，B 可選擇喊 "Prove it!" (限一次) 或做第三次。',
+      proveItDesc2: '若喊 "Prove it!"，A 須重做該招。A 成功則贏；A 失敗則無人失分，換 B 出招。'
+    },
     freestyle: {
       title: 'Freestyle BATTLE',
       subtitle: '公開組 / PRO組',
