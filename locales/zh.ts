@@ -278,9 +278,9 @@ export const zh = {
       title: 'Freestyle BATTLE',
       subtitle: '公開組 / PRO組',
       scoring: {
-        creativity: { percent: '33%', title: 'Creativity 創意', desc: '招式的極致思考與原創' },
-        flow: { percent: '33%', title: 'Flow 流暢', desc: '整體流暢與流潤度' },
-        difficulty: { percent: '33%', title: 'Tech. Diff. 難度', desc: '技術難度、完成度' }
+        creativity: { percent: '30%', title: 'Creativity 創意', desc: '招式的極致思考與原創' },
+        flow: { percent: '40%', title: 'Flow 流暢', desc: '整體流暢與流潤度' },
+        difficulty: { percent: '30%', title: 'Tech. Diff. 難度', desc: '技術難度、完成度' }
       },
       qualifiers: {
         title: '海選階段 Qualifiers',

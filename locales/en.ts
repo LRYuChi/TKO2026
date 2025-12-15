@@ -278,9 +278,9 @@ export const en = {
       title: 'Freestyle BATTLE',
       subtitle: 'Open / PRO Division',
       scoring: {
-        creativity: { percent: '33%', title: 'Creativity', desc: 'Ultimate thinking and originality' },
-        flow: { percent: '33%', title: 'Flow', desc: 'Overall smoothness and fluidity' },
-        difficulty: { percent: '33%', title: 'Tech. Diff.', desc: 'Technical difficulty & execution' }
+        creativity: { percent: '30%', title: 'Creativity', desc: 'Ultimate thinking and originality' },
+        flow: { percent: '40%', title: 'Flow', desc: 'Overall smoothness and fluidity' },
+        difficulty: { percent: '30%', title: 'Tech. Diff.', desc: 'Technical difficulty & execution' }
       },
       qualifiers: {
         title: 'Qualifiers',
