@@ -7,14 +7,23 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+TC:wght@300;400;500;600;700&family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- 優化字體載入：中文使用 Noto Sans TC，英文標題使用 Bebas Neue，內文使用 Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700;900&family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script>
       tailwind.config = {
         theme: {
           extend: {
             fontFamily: {
-              sans: ['"IBM Plex Sans TC"', 'sans-serif'],
-              heading: ['"Oswald"', 'sans-serif'],
+              sans: ['"Noto Sans TC"', '"Inter"', 'system-ui', 'sans-serif'],
+              heading: ['"Bebas Neue"', '"Noto Sans TC"', 'sans-serif'],
+              mono: ['"JetBrains Mono"', 'Consolas', 'monospace'],
+            },
+            letterSpacing: {
+              'tightest': '-0.075em',
+              'extra-wide': '0.2em',
+            },
+            lineHeight: {
+              'relaxed-plus': '1.75',
             },
             colors: {
               tko: {
@@ -35,10 +44,63 @@
       }
     </script>
     <style>
-      /* Apply font globally */
+      /* 全局字體優化 */
       html, body {
-        font-family: 'IBM Plex Sans TC', sans-serif;
+        font-family: 'Noto Sans TC', 'Inter', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
       }
+
+      /* 中文字體優化 */
+      html.lang-zh {
+        letter-spacing: 0.02em;
+      }
+      
+      html.lang-zh h1,
+      html.lang-zh h2,
+      html.lang-zh h3 {
+        letter-spacing: 0.05em;
+        font-weight: 700;
+      }
+
+      /* 英文字體優化 */
+      html.lang-en {
+        letter-spacing: 0.01em;
+      }
+      
+      html.lang-en h1,
+      html.lang-en h2,
+      html.lang-en h3 {
+        letter-spacing: 0.02em;
+        font-weight: 800;
+      }
+
+      /* 標題字體加強 */
+      .font-heading {
+        font-weight: 700;
+        line-height: 1.1;
+      }
+
+      /* 段落優化 */
+      p {
+        line-height: 1.75;
+      }
+
+      html.lang-zh p {
+        letter-spacing: 0.03em;
+      }
+
+      html.lang-en p {
+        letter-spacing: 0.005em;
+      }
+
+      /* 數字和百分比優化 */
+      .numeric {
+        font-variant-numeric: tabular-nums;
+        font-feature-settings: "tnum";
+      }
+
       /* Custom scrollbar for better aesthetics */
       ::-webkit-scrollbar {
         width: 8px;

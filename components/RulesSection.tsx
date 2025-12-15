@@ -27,15 +27,15 @@ const RulesSection: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             {/* Title */}
             <div className="text-center mb-16">
-                <h2 className="text-5xl md:text-7xl font-heading font-bold text-tko-black mb-6">{t.rules.title}</h2>
+                <h2 className="text-5xl md:text-7xl font-heading font-extrabold text-tko-black mb-8 tracking-tight leading-none">{t.rules.title}</h2>
                 <div className="w-24 h-1.5 bg-tko-red mx-auto mb-8"></div>
                 
                 {/* General Rules Box */}
                 <div className="max-w-5xl mx-auto bg-gray-50 p-8 md:p-10 border-l-8 border-tko-black text-left mb-16 shadow-inner">
-                    <h3 className="font-heading font-bold text-2xl mb-6 flex items-center gap-3 text-tko-black uppercase tracking-wide">
+                    <h3 className="font-heading font-bold text-2xl md:text-3xl mb-8 flex items-center gap-3 text-tko-black uppercase tracking-wide">
                         <Shield className="w-8 h-8 text-tko-red" /> {t.rules.generalRules.title}
                     </h3>
-                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-4 text-lg md:text-xl text-gray-700 list-none font-medium">
+                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-5 text-lg md:text-xl text-gray-700 list-none font-medium leading-relaxed-plus">
                         {t.rules.generalRules.items.map((item, index) => (
                           <li key={index} className={`flex gap-3 ${index === t.rules.generalRules.items.length - 1 ? 'md:col-span-2' : ''}`}>
                             <span className="text-tko-red font-bold text-2xl">›</span> {item}
@@ -87,7 +87,7 @@ const RulesSection: React.FC = () => {
                     <FlameIcon />
                 </div>
                 <div>
-                    <h3 className="text-5xl md:text-6xl font-heading font-bold uppercase tracking-tight text-white">
+                    <h3 className="text-5xl md:text-7xl font-heading font-extrabold uppercase tracking-tightest text-white leading-none">
                         {t.rules.freestyle.title}
                     </h3>
                     <p className="text-gray-400 text-lg tracking-widest uppercase mt-2 font-mono">
@@ -99,19 +99,19 @@ const RulesSection: React.FC = () => {
             {/* Scoring Criteria */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
                 <div className="bg-neutral-900/50 p-10 border border-white/10 hover:border-tko-yellow/50 transition-colors group">
-                    <div className="text-6xl font-heading font-bold text-tko-yellow mb-4 group-hover:scale-110 transition-transform origin-left">{t.rules.freestyle.scoring.creativity.percent}</div>
-                    <div className="text-xl text-white font-bold uppercase tracking-widest mb-2">{t.rules.freestyle.scoring.creativity.title}</div>
-                    <p className="text-gray-400 text-sm">{t.rules.freestyle.scoring.creativity.desc}</p>
+                    <div className="text-7xl md:text-8xl font-heading font-extrabold text-tko-yellow mb-4 group-hover:scale-110 transition-transform origin-left numeric">{t.rules.freestyle.scoring.creativity.percent}</div>
+                    <div className="text-xl md:text-2xl text-white font-bold uppercase tracking-extra-wide mb-2">{t.rules.freestyle.scoring.creativity.title}</div>
+                    <p className="text-gray-400 text-sm md:text-base leading-relaxed">{t.rules.freestyle.scoring.creativity.desc}</p>
                 </div>
                 <div className="bg-neutral-900/50 p-10 border border-white/10 hover:border-tko-green/50 transition-colors group">
-                    <div className="text-6xl font-heading font-bold text-tko-green mb-4 group-hover:scale-110 transition-transform origin-left">{t.rules.freestyle.scoring.flow.percent}</div>
-                    <div className="text-xl text-white font-bold uppercase tracking-widest mb-2">{t.rules.freestyle.scoring.flow.title}</div>
-                    <p className="text-gray-400 text-sm">{t.rules.freestyle.scoring.flow.desc}</p>
+                    <div className="text-7xl md:text-8xl font-heading font-extrabold text-tko-green mb-4 group-hover:scale-110 transition-transform origin-left numeric">{t.rules.freestyle.scoring.flow.percent}</div>
+                    <div className="text-xl md:text-2xl text-white font-bold uppercase tracking-extra-wide mb-2">{t.rules.freestyle.scoring.flow.title}</div>
+                    <p className="text-gray-400 text-sm md:text-base leading-relaxed">{t.rules.freestyle.scoring.flow.desc}</p>
                 </div>
                 <div className="bg-neutral-900/50 p-10 border border-white/10 hover:border-tko-red/50 transition-colors group">
-                    <div className="text-6xl font-heading font-bold text-tko-red mb-4 group-hover:scale-110 transition-transform origin-left">{t.rules.freestyle.scoring.difficulty.percent}</div>
-                    <div className="text-xl text-white font-bold uppercase tracking-widest mb-2">{t.rules.freestyle.scoring.difficulty.title}</div>
-                    <p className="text-gray-400 text-sm">{t.rules.freestyle.scoring.difficulty.desc}</p>
+                    <div className="text-7xl md:text-8xl font-heading font-extrabold text-tko-red mb-4 group-hover:scale-110 transition-transform origin-left numeric">{t.rules.freestyle.scoring.difficulty.percent}</div>
+                    <div className="text-xl md:text-2xl text-white font-bold uppercase tracking-extra-wide mb-2">{t.rules.freestyle.scoring.difficulty.title}</div>
+                    <p className="text-gray-400 text-sm md:text-base leading-relaxed">{t.rules.freestyle.scoring.difficulty.desc}</p>
                 </div>
             </div>
 

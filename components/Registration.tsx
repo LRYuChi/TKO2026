@@ -8,9 +8,9 @@ const Registration: React.FC = () => {
     <section id="registration" className="py-24 bg-tko-black scroll-mt-20 border-t border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <span className="text-tko-red font-bold tracking-widest uppercase text-sm">{t.registration.subtitle}</span>
-          <h2 className="text-4xl md:text-5xl font-heading font-bold text-white mb-6">{t.registration.title}</h2>
-          <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+          <span className="text-tko-red font-bold tracking-extra-wide uppercase text-sm mb-3 block drop-shadow">{t.registration.subtitle}</span>
+          <h2 className="text-4xl md:text-6xl font-heading font-extrabold text-white mb-8 tracking-tight leading-tight">{t.registration.title}</h2>
+          <p className="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed-plus">
             {t.registration.method.content}
           </p>
         </div>

@@ -45,8 +45,8 @@ const EventDetails: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-20">
-            <span className="text-tko-green font-bold tracking-widest uppercase text-sm mb-2 block">{t.eventDetails.subtitle}</span>
-            <h2 className="text-4xl md:text-5xl font-heading font-bold text-white mb-6 uppercase tracking-tight">{t.eventDetails.title}</h2>
+            <span className="text-tko-green font-bold tracking-extra-wide uppercase text-sm mb-3 block drop-shadow">{t.eventDetails.subtitle}</span>
+            <h2 className="text-4xl md:text-6xl font-heading font-extrabold text-white mb-8 uppercase tracking-tight leading-tight">{t.eventDetails.title}</h2>
             <div className="flex justify-center gap-2">
                 <div className="w-12 h-1 bg-tko-yellow"></div>
                 <div className="w-4 h-1 bg-tko-green"></div>
@@ -64,11 +64,11 @@ const EventDetails: React.FC = () => {
               <div className={`${cat.color} w-14 h-14 flex items-center justify-center shadow-lg shadow-black/50 mb-6 group-hover:scale-110 transition-transform duration-300`}>
                 {cat.icon}
               </div>
-              <h3 className="text-xl font-bold font-heading text-white mb-3">{cat.title}</h3>
+              <h3 className="text-xl md:text-2xl font-bold font-heading text-white mb-4 tracking-wide">{cat.title}</h3>
               <p className="text-base text-gray-300 mb-6 leading-relaxed min-h-[40px]">{cat.desc}</p>
               <div className="flex flex-wrap gap-2">
                 {cat.groups.map((g) => (
-                  <span key={g} className="px-2 py-1 bg-white/5 text-gray-300 text-sm font-bold rounded-sm border border-white/10">
+                  <span key={g} className="px-3 py-1.5 bg-white/10 text-gray-200 text-sm font-semibold rounded border border-white/20 hover:bg-white/20 transition-colors">
                     {g}
                   </span>
                 ))}
