@@ -1,15 +1,17 @@
 import React from 'react';
 import { Check, ArrowRight } from 'lucide-react';
+import { useTranslation } from '../hooks/useTranslation';
 
 const Registration: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <section id="registration" className="py-24 bg-tko-black scroll-mt-20 border-t border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <span className="text-tko-red font-bold tracking-widest uppercase text-sm">Join the Battle</span>
-          <h2 className="text-4xl md:text-5xl font-heading font-bold text-white mb-6">報名資訊</h2>
+          <span className="text-tko-red font-bold tracking-widest uppercase text-sm">{t.registration.subtitle}</span>
+          <h2 className="text-4xl md:text-5xl font-heading font-bold text-white mb-6">{t.registration.title}</h2>
           <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-            預計一月初開放 Google 表單報名。學生持有效證件可享優惠折扣。
+            {t.registration.method.content}
           </p>
         </div>
 
@@ -19,20 +21,12 @@ const Registration: React.FC = () => {
             <div className="mb-4">
               <span className="text-gray-400 text-sm font-bold uppercase tracking-widest">Entry Level</span>
             </div>
-            <h3 className="text-2xl font-heading font-bold text-white mb-2">純報名比賽</h3>
-            <div className="text-4xl font-heading font-bold text-white mb-6">NT$1,500</div>
+            <h3 className="text-2xl font-heading font-bold text-white mb-2">{t.registration.fees.basic.name}</h3>
+            <div className="text-4xl font-heading font-bold text-white mb-6">{t.registration.fees.basic.price}</div>
             <ul className="space-y-4 mb-8 flex-grow border-t border-white/10 pt-6">
               <li className="flex items-start">
                 <Check className="w-5 h-5 text-tko-green mr-3 flex-shrink-0 mt-0.5" />
-                <span className="text-gray-300 text-base">參賽資格</span>
-              </li>
-              <li className="flex items-start">
-                <Check className="w-5 h-5 text-tko-green mr-3 flex-shrink-0 mt-0.5" />
-                <span className="text-gray-300 text-base">活動貼紙</span>
-              </li>
-              <li className="flex items-start">
-                <Check className="w-5 h-5 text-tko-green mr-3 flex-shrink-0 mt-0.5" />
-                <span className="text-gray-300 text-base">精美周邊小物</span>
+                <span className="text-gray-300 text-base">{t.registration.fees.basic.includes}</span>
               </li>
             </ul>
             <button className="w-full py-4 bg-white/10 hover:bg-white text-white hover:text-black font-bold uppercase tracking-widest transition-colors">
@@ -106,8 +100,8 @@ const Registration: React.FC = () => {
             <div className="inline-flex items-center gap-4 bg-neutral-900 px-8 py-4 border border-tko-yellow shadow-[4px_4px_0px_0px_#FF9B24]">
                 <span className="text-3xl">🎓</span>
                 <div className="text-left">
-                    <div className="text-white font-bold text-base uppercase tracking-wide">Student Discount</div>
-                    <div className="text-base text-gray-400">持有效學生證報名可折抵 <span className="font-bold text-tko-red">NT$500</span> (比賽當天簽到時須出示)</div>
+                    <div className="text-white font-bold text-base uppercase tracking-wide">{t.registration.fees.discount.title}</div>
+                    <div className="text-base text-gray-400">{t.registration.fees.discount.content}</div>
                 </div>
             </div>
         </div>

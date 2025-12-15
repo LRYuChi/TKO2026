@@ -1,7 +1,9 @@
 import React from 'react';
 import { Facebook, Instagram, Mail } from 'lucide-react';
+import { useTranslation } from '../hooks/useTranslation';
 
 const Footer: React.FC = () => {
+  const { t } = useTranslation();
   // 同步更新 Footer 的 Logo
   const LOGO_SRC = "https://lh3.googleusercontent.com/d/17pdbWsG9ZXzfpXo-UmR04dmvrc4pQy6M"; 
 
@@ -29,7 +31,7 @@ const Footer: React.FC = () => {
                  <h3 className="text-3xl font-heading font-bold mb-2 tracking-tighter">TKO <span className="text-tko-yellow">2026</span></h3>
             </div>
 
-            <p className="text-sm text-gray-500 font-mono tracking-widest uppercase">Taiwan Kendama Open Official Page</p>
+            <p className="text-sm text-gray-500 font-mono tracking-widest uppercase">{t.footer.subtitle}</p>
           </div>
           
           <div className="flex gap-8">
@@ -39,8 +41,7 @@ const Footer: React.FC = () => {
           </div>
 
           <div className="text-center md:text-right text-sm text-gray-600 font-mono">
-            <p>&copy; 2026 Taiwan Kendama Open.</p>
-            <p className="mt-1">All rights reserved.</p>
+            <p>{t.footer.rights}</p>
           </div>
         </div>
       </div>
