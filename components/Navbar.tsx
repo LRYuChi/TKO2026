@@ -1,9 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import React, { useState, useEffect, useContext } from 'react';
+import { Menu, X, Globe } from 'lucide-react';
+import { useTranslation } from '../hooks/useTranslation';
+import { LanguageContext } from '../contexts/LanguageContext';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const { t } = useTranslation();
+  const { language, toggleLanguage } = useContext(LanguageContext);
 
   // Logo 圖片連結
   const LOGO_SRC = "https://lh3.googleusercontent.com/d/17pdbWsG9ZXzfpXo-UmR04dmvrc4pQy6M"; 
@@ -26,10 +30,10 @@ const Navbar: React.FC = () => {
   };
 
   const navLinks = [
-    { name: '活動介紹', id: 'details' },
-    { name: '報名資訊', id: 'registration' },
-    { name: '賽制規則', id: 'rules' },
-    { name: '活動賽程', id: 'schedule' },
+    { name: t.nav.details, id: 'details' },
+    { name: t.nav.registration, id: 'registration' },
+    { name: t.nav.rules, id: 'rules' },
+    // { name: t.nav.schedule, id: 'schedule' },
   ];
 
   return (
@@ -75,12 +79,25 @@ const Navbar: React.FC = () => {
                 {link.name}
               </a>
             ))}
+            
+            {/* Language Toggle Button */}
+            <button
+              onClick={toggleLanguage}
+              className={`px-3 py-2 text-sm font-bold tracking-widest uppercase transition-colors duration-200 flex items-center gap-2 hover:text-tko-yellow ${
+                isScrolled ? 'text-gray-300' : 'text-white/90'
+              }`}
+              title="Switch Language"
+            >
+              <Globe size={16} />
+              <span>{language === 'zh' ? 'EN' : '中'}</span>
+            </button>
+            
             <a
               href="#registration"
               onClick={(e) => scrollToSection(e, 'registration')}
               className="px-6 py-2 bg-tko-green hover:bg-green-700 text-white text-sm font-bold tracking-widest uppercase skew-x-[-10deg] transition-all transform hover:translate-y-[-2px] border-l-4 border-tko-yellow"
             >
-              <span className="block skew-x-[10deg]">立即報名</span>
+              <span className="block skew-x-[10deg]">{t.nav.registerNow}</span>
             </a>
           </div>
 
@@ -116,7 +133,7 @@ const Navbar: React.FC = () => {
                 onClick={(e) => scrollToSection(e, 'registration')}
                 className="block w-full text-center px-5 py-4 bg-tko-green text-white text-base font-bold hover:bg-green-700 uppercase tracking-widest"
               >
-                立即報名
+                {t.nav.registerNow}
               </a>
             </div>
           </div>

@@ -11,7 +11,7 @@ const EventDetails: React.FC = () => {
       color: "bg-tko-yellow"
     },
     {
-      title: "指定賽 (Designated)",
+      title: "指定賽 (OPEN)",
       desc: "穩定性與成功率的對決",
       groups: ["新手組", "初階組", "進階組", "挑戰組"],
       icon: <Target className="w-6 h-6 text-white" />,

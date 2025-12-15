@@ -40,6 +40,9 @@ const RulesSection: React.FC = () => {
                         <li className="flex gap-3"><span className="text-tko-red font-bold text-2xl">›</span> 若被判定違規，該招式失敗。</li>
                         <li className="flex gap-3"><span className="text-tko-red font-bold text-2xl">›</span> 結尾若為「收劍」招式，不限制收劍方式。</li>
                         <li className="flex gap-3"><span className="text-tko-red font-bold text-2xl">›</span> 天中殺：劍尖必須明顯朝下，依裁判判決為主。</li>
+                        <li className="flex gap-3"><span className="text-tko-red font-bold text-2xl">›</span> 若未特別指定，旋轉方向（正逆迴旋）沒有任何限制。</li>
+                        <li className="flex gap-3"><span className="text-tko-red font-bold text-2xl">›</span> 若未特別指定，劍玉的持法沒有任何限制。</li>
+                        <li className="flex gap-3 md:col-span-2"><span className="text-tko-red font-bold text-2xl">›</span> 一周系招式，小皿、大皿順序不限；如招式包含中皿，必須以中皿為最後動作。</li>
                     </ul>
                 </div>
             </div>
@@ -228,7 +231,7 @@ const NoviceRules = () => (
                 <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-10">
                     <div>
                         {/* Video Area 1: Novice Speed */}
-                        <VideoEmbed title="新手速度賽示範" videoId="" />
+                        <VideoEmbed title="新手速度賽示範" videoId="mCDOfP8fDRo" />
                         
                         <h4 className="font-bold mb-6 text-tko-green uppercase tracking-wide text-lg border-b-2 border-gray-200 pb-2">新手組招式</h4>
                         <ol className="list-decimal list-inside text-xl space-y-4 text-tko-black font-medium leading-relaxed">
@@ -240,7 +243,7 @@ const NoviceRules = () => (
                     </div>
                      <div>
                         {/* Video Area 2: Beginner Speed */}
-                        <VideoEmbed title="初階速度賽示範" videoId="" />
+                        <VideoEmbed title="初階速度賽示範" videoId="0FqbkkM-h5g" />
 
                         <h4 className="font-bold mb-6 text-tko-green uppercase tracking-wide text-lg border-b-2 border-gray-200 pb-2">初階組招式</h4>
                         <ol className="list-decimal list-inside text-xl space-y-4 text-tko-black font-medium leading-relaxed">
@@ -259,7 +262,7 @@ const NoviceRules = () => (
              <div className="absolute top-0 right-0 w-40 h-40 bg-tko-green/10 rounded-bl-full"></div>
             <div className="flex items-center gap-4 mb-10 relative z-10">
                 <div className="bg-tko-green p-4 text-white"><TargetIcon /></div>
-                <h3 className="text-3xl md:text-4xl font-heading font-bold uppercase">指定賽 (Designated)</h3>
+                <h3 className="text-3xl md:text-4xl font-heading font-bold uppercase">指定賽 (OPEN)</h3>
             </div>
             <div className="space-y-8 text-lg text-gray-700 relative z-10">
                 <p><span className="font-bold bg-black text-white px-3 py-1 text-sm uppercase mr-3 align-middle">Format</span> 1 對 1 對戰 (海選樹狀圖)</p>
@@ -275,7 +278,7 @@ const NoviceRules = () => (
                     <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-10 pt-6 border-t-2 border-gray-200">
                         <div>
                              {/* Video Area 3: Novice Designated */}
-                             <VideoEmbed title="新手指定賽示範" videoId="" />
+                             <VideoEmbed title="新手指定賽示範" videoId="TIZAj3uLf8A" />
 
                              <p className="font-bold mb-4 text-tko-green text-xl">新手組</p>
                              <ul className="list-none text-tko-black space-y-3 text-lg font-medium leading-relaxed">
@@ -294,7 +297,7 @@ const NoviceRules = () => (
                         </div>
                         <div>
                              {/* Video Area 4: Beginner Designated */}
-                             <VideoEmbed title="初階指定賽示範" videoId="" />
+                             <VideoEmbed title="初階指定賽示範" videoId="7nAaXEVizkg" />
 
                              <p className="font-bold mb-4 text-tko-green text-xl">初階組</p>
                              <ul className="list-none text-tko-black space-y-3 text-lg font-medium leading-relaxed">
@@ -351,7 +354,7 @@ const AdvancedRules = () => (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 border-t border-gray-200 pt-10">
                  {/* Left: Advanced */}
                  <div className="bg-gray-50/50 p-6 rounded-lg border border-gray-100">
-                        <VideoEmbed title="進階指定賽示範" videoId="" />
+                        <VideoEmbed title="進階指定賽示範" videoId="1nD6z3gShXY" />
                         <div className="flex items-center justify-between mb-6 border-b border-gray-200 pb-4">
                              <p className="font-bold text-white bg-tko-black inline-block px-5 py-2 text-base tracking-wider uppercase">進階組 Advanced</p>
                         </div>
@@ -365,26 +368,26 @@ const AdvancedRules = () => (
                             <li>6. 逆一迴旋月面 - 月上月 - 逆一迴旋收</li>
                             <li>7. 殺手中皿極意 - 收劍</li>
                             <li>8. 丹麥一周</li>
-                            <li>9. 飛行球 - 兩圈離轉地球</li>
+                            <li>9. 兩圈離轉地球</li>
                             <li>10. 拋接二迴旋燈台 - 1.5 Cush in</li>
-                            <li className="text-tko-red">▲ 飛行機 - tap 逆一迴旋in - 一迴旋Cush in</li>
+                            <li className="text-tko-red">▲ 飛行機 - tap 逆一迴旋 in - 一迴旋 Cush in</li>
                             <li className="text-tko-red">▲ 蠟燭 - 離轉蠟燭 - 止劍</li>
-                            <li className="text-tko-red">▲ 轉劍轉劍止劍</li>
+                            <li className="text-tko-red">▲ 轉劍 late 轉劍止劍</li>
                         </ul>
                  </div>
                  
                  {/* Right: Challenge */}
                  <div className="bg-gray-50/50 p-6 rounded-lg border border-gray-100">
-                        <VideoEmbed title="挑戰組指定賽示範" videoId="" />
+                        <VideoEmbed title="挑戰組指定賽示範" videoId="l1HcL9fFJLU" />
                         <div className="flex items-center justify-between mb-6 border-b border-gray-200 pb-4">
                             <p className="font-bold text-white bg-tko-black inline-block px-5 py-2 text-base tracking-wider uppercase">挑戰組 Challenge</p>
                         </div>
                         {/* Modified: Font size adjusted to text-lg, font-medium, leading-relaxed for elegance. Red text normalized. */}
                         <ul className="text-lg text-tko-black space-y-3 list-none font-medium leading-relaxed">
-                             <li>1. 飛行機 - 三圈跳劍</li>
-                            <li>2. 逆月面 - 3TAP一迴旋逆月 - 止劍</li>
-                            <li>3. 拉二迴旋轉劍兩圈拋一迴旋飛行機</li>
-                            <li>4. 非慣用手飛行球 - 離轉地球</li>
+                             <li>1. 三圈跳劍</li>
+                            <li>2. 逆月面 - 3 tap 一迴旋逆月 - 止劍</li>
+                            <li>3. 拉二迴旋轉劍 兩圈 拋一迴旋飛行機</li>
+                            <li>4. 非慣用手離轉地球</li>
                             <li>5. 逆 juggle ghost juggle 正 juggle 止劍</li>
                             <li>6. 中皿極意 - 太陽極意 - 大鶯 - 小鶯 - 收劍</li>
                             <li>7. 直拉夢幻小竹馬 - 夢幻馬上馬 - 抓劍收</li>
@@ -392,7 +395,7 @@ const AdvancedRules = () => (
                             <li>9. 一迴旋重力機 - 一迴旋重力機快手止劍</li>
                             <li>10. 一迴旋燈台 - 逆燈上燈 insta juggle 燈台 insta 逆一迴旋收</li>
                             <li className="text-tko-red">▲ 轉劍 juggle 轉劍止劍</li>
-                            <li className="text-tko-red">▲ 離轉兩圈 juggle 2tap juggle 止劍</li>
+                            <li className="text-tko-red">▲ 離轉 兩圈 juggle 2 tap juggle 止劍</li>
                             <li className="text-tko-red">▲ 月面 - 月上月 1 2 3 - 收劍</li>
                         </ul>
                  </div>

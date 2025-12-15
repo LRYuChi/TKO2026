@@ -1,7 +1,9 @@
 import React from 'react';
 import { ChevronDown } from 'lucide-react';
+import { useTranslation } from '../hooks/useTranslation';
 
 const Hero: React.FC = () => {
+  const { t } = useTranslation();
   // 1. 如果您在本地開發，請將圖片命名為 tko-main-visual.png 並放在 public 資料夾中。
   // 2. 如果是 WordPress，請上傳媒體庫後，將這裡換成圖片網址
   // [UPDATED] Google Drive Direct Link - 使用 Google User Content CDN 連結
@@ -83,10 +85,10 @@ const Hero: React.FC = () => {
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-6 justify-center w-full max-w-lg mt-2 mx-auto">
                 <a href="#registration" onClick={(e) => scrollToSection(e, 'registration')} className="group relative px-8 py-4 bg-tko-yellow text-tko-black font-bold text-lg uppercase tracking-widest overflow-hidden transition-all hover:bg-white clip-path-slant-right">
-                    <div className="absolute inset-0 w-full h-full bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div>
-                    <span className="relative z-10">立即報名 Register</span>
+                    <div className="absolute inset-0{t.nav.registerNow}</span>
                 </a>
                 <a href="#rules" onClick={(e) => scrollToSection(e, 'rules')} className="px-8 py-4 border border-white/30 hover:border-tko-green text-white hover:text-tko-green font-bold text-lg uppercase tracking-widest transition-all hover:bg-white/5">
+                    {t.nav.rules}s" onClick={(e) => scrollToSection(e, 'rules')} className="px-8 py-4 border border-white/30 hover:border-tko-green text-white hover:text-tko-green font-bold text-lg uppercase tracking-widest transition-all hover:bg-white/5">
                     查看賽制 Rules
                 </a>
             </div>
