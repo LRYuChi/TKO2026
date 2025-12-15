@@ -85,11 +85,11 @@ const Hero: React.FC = () => {
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-6 justify-center w-full max-w-lg mt-2 mx-auto">
                 <a href="#registration" onClick={(e) => scrollToSection(e, 'registration')} className="group relative px-8 py-4 bg-tko-yellow text-tko-black font-bold text-lg uppercase tracking-widest overflow-hidden transition-all hover:bg-white clip-path-slant-right">
-                    <div className="absolute inset-0{t.nav.registerNow}</span>
+                    <div className="absolute inset-0 w-full h-full bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div>
+                    <span className="relative z-10">{t.nav.registerNow}</span>
                 </a>
                 <a href="#rules" onClick={(e) => scrollToSection(e, 'rules')} className="px-8 py-4 border border-white/30 hover:border-tko-green text-white hover:text-tko-green font-bold text-lg uppercase tracking-widest transition-all hover:bg-white/5">
-                    {t.nav.rules}s" onClick={(e) => scrollToSection(e, 'rules')} className="px-8 py-4 border border-white/30 hover:border-tko-green text-white hover:text-tko-green font-bold text-lg uppercase tracking-widest transition-all hover:bg-white/5">
-                    查看賽制 Rules
+                    {t.nav.rules}
                 </a>
             </div>
         </div>
