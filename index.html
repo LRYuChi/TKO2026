@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TKO 臺灣劍玉公開賽</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+TC:wght@300;400;500;600;700&family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"IBM Plex Sans TC"', 'sans-serif'],
+              heading: ['"Oswald"', 'sans-serif'],
+            },
+            colors: {
+              tko: {
+                yellow: '#FF9B24', // C:0 M:39 Y:86 K:0
+                green: '#008A40',  // C:100 M:46 Y:75 K:0 (Previously Teal)
+                red: '#FF3033',    // C:0 M:81 Y:80 K:0
+                black: '#121212',
+                dark: '#1D1D1D',
+                gray: '#2A2A2A',   // Darkened gray for dark theme consistency
+                light: '#F3F4F6'
+              }
+            },
+            backgroundImage: {
+              'grid-pattern': "linear-gradient(to right, #333 1px, transparent 1px), linear-gradient(to bottom, #333 1px, transparent 1px)",
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Apply font globally */
+      html, body {
+        font-family: 'IBM Plex Sans TC', sans-serif;
+      }
+      /* Custom scrollbar for better aesthetics */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #121212; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #444; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #FF9B24; 
+      }
+      .font-outline-2 {
+        -webkit-text-stroke: 2px currentColor;
+      }
+      /* Text Highlight Selection */
+      ::selection {
+        background: #FF9B24;
+        color: #121212;
+      }
+    </style>
+  </head>
+  <body class="bg-tko-black text-white antialiased">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
