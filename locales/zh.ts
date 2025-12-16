@@ -215,8 +215,8 @@ export const zh = {
         '燈台 - 抓劍收',
         '重力機快手止劍',
         '招財貓收劍',
-        '▲ 逆飛行球 - 地球',
-        '▲ 竹馬 - 收劍'
+        '▲ 竹馬 - 收劍',
+        '▲ 逆飛行球 - 地球'
       ]
     },
     advancedDesignated: {
@@ -257,7 +257,7 @@ export const zh = {
         '一迴旋重力機 - 一迴旋重力機快手止劍',
         '一迴旋燈台 - 逆燈上燈 insta juggle 燈台 insta 逆一迴旋收',
         '▲ 轉劍 juggle 轉劍止劍',
-        '▲ 離轉 兩圈juggle 2 tap juggle 止劍',
+        '▲ 兩圈離轉 juggle 2 tap juggle 止劍',
         '▲ 月面 - 月上月 1 2 3 - 收劍'
       ]
     },
