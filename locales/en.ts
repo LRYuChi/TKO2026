@@ -140,7 +140,7 @@ export const en = {
     generalRules: {
       title: 'General Rules',
       items: [
-        'Players may not touch the ball, ken, or adjust the string with their non-dominant hand.',
+        'Players may not touch the tama, ken, or adjust the string with their non-dominant hand.',
         'For balance tricks, the dominant hand may not touch the kendama (Lighthouse/Lunar: no ken touch; Bird/Stilt: no tama touch).',
         'Insta spike techniques are allowed.',
         'If a rule is violated, the trick will be counted as failed.',
