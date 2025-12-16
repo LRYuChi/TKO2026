@@ -94,7 +94,8 @@ export const en = {
       basic: {
         price: 'NT$ 1,500',
         name: 'Competition-Only Package',
-        includes: 'Includes: Stickers + TKO Merchandise'
+        includes: 'Includes: Stickers + TKO Merchandise',
+        button: 'Coming Soon'
       },
       moreInfo: 'More merchandise bundle options will be released soon.',
       discount: {

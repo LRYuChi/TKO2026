@@ -94,7 +94,8 @@ export const zh = {
       basic: {
         price: 'NT$ 1,500',
         name: '純比賽套餐',
-        includes: '包含：貼紙 + TKO 周邊商品'
+        includes: '包含：貼紙 + TKO 周邊商品',
+        button: '即將開放'
       },
       moreInfo: '更多周邊商品套餐選項即將釋出。',
       discount: {

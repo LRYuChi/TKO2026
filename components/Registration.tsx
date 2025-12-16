@@ -30,7 +30,7 @@ const Registration: React.FC = () => {
               </li>
             </ul>
             <button className="w-full py-4 bg-white/10 hover:bg-white text-white hover:text-black font-bold uppercase tracking-widest transition-colors">
-              即將開放
+              {t.registration.fees.basic.button}
             </button>
           </div>
 
