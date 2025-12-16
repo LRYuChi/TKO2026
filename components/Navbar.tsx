@@ -127,6 +127,17 @@ const Navbar: React.FC = () => {
                 {link.name}
               </a>
             ))}
+            <button
+              onClick={() => {
+                toggleLanguage();
+                setIsOpen(false);
+              }}
+              className="w-full flex items-center justify-center gap-2 px-3 py-4 text-base font-bold text-gray-300 hover:text-tko-yellow hover:bg-white/5 border-b border-white/5"
+              title="Switch Language"
+            >
+              <Globe size={18} />
+              <span>{language === 'zh' ? 'EN' : '華'}</span>
+            </button>
             <div className="pt-4">
                <a
                 href="#registration"

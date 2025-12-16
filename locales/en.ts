@@ -201,8 +201,7 @@ export const en = {
         'Easy Spike, Flying Top',
         'Easy Bird, Spike',
         'Hanging Catch',
-        'Stuntplane Fasthands',
-        'Tama Cat, Spike',
+        '▲ Sara Grip Around The Block',
         '▲ Downspike'
       ],
       beginnerTricks: [
@@ -214,8 +213,9 @@ export const en = {
         'Pinky Spike, Spike',
         'Scooping Goldfish, Spike',
         'Lighthouse, Trade Spike',
-        '▲ Sara Grip Around The Block',
-        '▲ Stilt, In',
+        'Stuntplane Fasthands',
+        'Tama Cat, Spike',
+        '▲ Stilt, In',  
         '▲ Inward Swing Spike, Earth Turn'
       ]
     },
