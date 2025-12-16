@@ -334,8 +334,8 @@ const AdvancedRules = () => {
             {/* Bottom Section: Trick Lists Split (Side by Side) */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 border-t border-gray-200 pt-10">
                  {/* Left: Advanced */}
-                 <div className="bg-gray-50/50 p-6 rounded-lg border border-gray-100">
-                        <VideoEmbed title={t.rules.advancedDesignated.videoAdvanced} videoId="1nD6z3gShXY" />
+                   <div className="bg-gray-50/50 p-6 rounded-lg border border-gray-100">
+                       <VideoEmbed title={t.rules.advancedDesignated.videoAdvanced} videoId="ifjtWtTV0Ww" />
                         <div className="flex items-center justify-between mb-6 border-b border-gray-200 pb-4">
                              <p className="font-bold text-white bg-tko-black inline-block px-5 py-2 text-base tracking-wider uppercase">{t.rules.advancedDesignated.advancedGroup}</p>
                         </div>
@@ -348,8 +348,8 @@ const AdvancedRules = () => {
                  </div>
                  
                  {/* Right: Challenge */}
-                 <div className="bg-gray-50/50 p-6 rounded-lg border border-gray-100">
-                        <VideoEmbed title={t.rules.advancedDesignated.videoChallenge} videoId="l1HcL9fFJLU" />
+                   <div className="bg-gray-50/50 p-6 rounded-lg border border-gray-100">
+                       <VideoEmbed title={t.rules.advancedDesignated.videoChallenge} videoId="QaaVfw2VY5s" />
                         <div className="flex items-center justify-between mb-6 border-b border-gray-200 pb-4">
                             <p className="font-bold text-white bg-tko-black inline-block px-5 py-2 text-base tracking-wider uppercase">{t.rules.advancedDesignated.challengeGroup}</p>
                         </div>
