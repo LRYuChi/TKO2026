@@ -84,7 +84,7 @@ export const en = {
           {
             name: 'Freestyle Open',
             sub: ['Open Division', 'Pro Division'],
-            note: 'If fewer than 8 players register for the Pro Division, the Pro Division will be cancelled and merged into the Open Division.'
+            note: '*If fewer than 8 players register for the Pro Division, the Pro Division will be cancelled and merged into the Open Division.'
           }
         ]
       }
@@ -131,7 +131,7 @@ export const en = {
         }
       },
       notes: '* Division Guidelines: Players may only register for one of First Timer, Beginner, Intermediate, or Expert.',
-      proNote: 'If the Freestyle PRO Division has fewer than 8 registrants, the PRO Division will be cancelled and merged into the Open Division.'
+      proNote: '*If the Freestyle PRO Division has fewer than 8 registrants, the PRO Division will be cancelled and merged into the Open Division.'
     }
   },
   rules: {
@@ -296,7 +296,7 @@ export const en = {
         rules: [
           'The 16 finalists draw numbers for 1v1 battle matchups.',
           'Each player performs <strong>two rounds</strong>, each lasting <strong>45 seconds</strong>.',
-          'Stage is divided into Blue Side and Orange Side battle areas.',
+          'Stage is divided into Red Side and Green Side battle areas.',
           'Judges score comprehensively and directly determine the winner.'
         ]
       },

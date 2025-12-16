@@ -84,7 +84,7 @@ export const zh = {
           {
             name: 'Freestyle 公開賽',
             sub: ['公開組', 'PRO組'],
-            note: '若 PRO 組報名人數不足 8 人，將取消 PRO 組並併入公開組。'
+            note: '*若 PRO 組報名人數不足 8 人，將取消 PRO 組並併入公開組。'
           }
         ]
       }
@@ -131,7 +131,7 @@ export const zh = {
         }
       },
       notes: '＊各組別說明：新手、初階、進階、挑戰組不可重複報名。',
-      proNote: 'Freestyle PRO 組如人數不足 8 位，則取消 PRO 組，並編列進公開組一起比賽。'
+      proNote: '＊Freestyle PRO 組如人數不足 8 位，則取消 PRO 組，並編列進公開組一起比賽。'
     }
   },
   rules: {
@@ -296,7 +296,7 @@ export const zh = {
         rules: [
           '16 強採抽籤決定 1v1 對戰組合。',
           '雙方各進行 <strong>兩輪</strong>，每輪 <strong>45 秒</strong>。',
-          '場地分藍色與橘色對戰區。',
+          '場地分紅色與綠色對戰區。',
           '裁判綜合評分，舉旗直接判定優勝者。'
         ]
       },
