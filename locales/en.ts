@@ -233,14 +233,14 @@ export const en = {
       advancedTricks: [
         'Switch Stuntplane Fasthands',
         'Around Bird',
-        '2 Turns Jumping Stick Swap Downspike Fasthand',
+        'Airplane 2 Turn Swap Downspike Fasthands',
         'Mooncircle Ghost Lighthouse, In',
         'Stilt, Over The Valley, Flip In',
         'Inward 1 Turn Lunar, Inward Lunar Flip, Inward Flip In',
         'Sara Handlestall, Spike',
-        'Around Danmark',
+        'Around Denmark',
         'Double Whirlwind',
-        'Swap 2 Turns Lighthouse, 1.5 Cush in',
+        'Toss 2 Turns Lighthouse, 1.5 Cush in',
         '▲ Airplane, Tap Inward Flip In, Flip Cush In',
         '▲ Candlestick Flip, Trade Ken Grip Spike',
         '▲ Gunslinger, Late Gunslinger Spike'
