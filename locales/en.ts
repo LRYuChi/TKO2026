@@ -201,8 +201,8 @@ export const en = {
         'Easy Spike, Flying Top',
         'Easy Bird, Spike',
         'Hanging Catch',
-        '▲ Sara Grip Around The Block',
-        '▲ Downspike'
+        '▲ Downspike',
+        '▲ Sara Grip Around The Block'
       ],
       beginnerTricks: [
         'Around Europe',
@@ -240,7 +240,7 @@ export const en = {
         'Sara Handlestall, Spike',
         'Around Denmark',
         'Double Whirlwind',
-        'Toss 2 Turns Lighthouse, 1.5 Cush in',
+        'Toss Lighthouse, 1.5 Cush in',
         '▲ Airplane, Tap Inward Flip In, Flip Cush In',
         '▲ Candlestick Flip, Trade Ken Grip Spike',
         '▲ Gunslinger, Late Gunslinger Spike'
