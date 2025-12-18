@@ -35,8 +35,8 @@ const Footer: React.FC = () => {
           </div>
           
           <div className="flex gap-8">
-            <a href="#" className="text-gray-500 hover:text-tko-yellow transition-colors"><Instagram size={28} /></a>
-            <a href="#" className="text-gray-500 hover:text-white transition-colors"><Facebook size={28} /></a>
+            <a href="https://www.instagram.com/twkendamaopen/" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-tko-yellow transition-colors"><Instagram size={28} /></a>
+            <a href="https://www.facebook.com/profile.php?id=61584467373517" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-white transition-colors"><Facebook size={28} /></a>
             <a href="#" className="text-gray-500 hover:text-tko-green transition-colors"><Mail size={28} /></a>
           </div>
 
