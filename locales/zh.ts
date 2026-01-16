@@ -66,7 +66,8 @@ export const zh = {
     subtitle: 'REGISTRATION',
     method: {
       title: '報名方式',
-      content: '報名將透過 Google 表單進行。報名表單預計於 1 月開放。'
+      content: '報名期限：2026 / 01 / 16（五）～ 2026 / 02 / 15（日）',
+      note: '＊逾期不受理，請務必在期限內完成報名。'
     },
     divisions: {
       title: '賽事組別',
@@ -91,46 +92,37 @@ export const zh = {
     },
     fees: {
       title: '報名費用與套餐',
-      basic: {
+      registrationUrl: 'https://forms.gle/Ubksz7Gb92RAjwMu7',
+      planA: {
+        label: '(A) 基本方案',
         price: 'NT$ 1,500',
-        name: '純比賽套餐',
-        includes: '包含：貼紙 + TKO 周邊商品',
-        button: '即將開放'
+        includes: '含：【TKO 帆布袋 + 胸章】',
+        button: '立即報名'
       },
-      moreInfo: '更多周邊商品套餐選項即將釋出。',
+      planB: {
+        label: '(B) 擦擦汗方案',
+        price: 'NT$ 1,800',
+        includes: '含：【TKO 毛巾 + 帆布袋 + 胸章】',
+        button: '立即報名'
+      },
+      planC: {
+        label: '(C) 穿好看方案',
+        price: 'NT$ 2,100',
+        includes: '含：【TKO Tee + 帆布袋 + 胸章】',
+        button: '立即報名'
+      },
+      planD: {
+        label: '(D) 大全套方案',
+        labelTag: '推薦',
+        price: 'NT$ 3,200',
+        includes: '含：【TKO Tee + 毛巾 + 襪子 + 海報 + 鑰匙圈 + 帆布袋 + 胸章】',
+        button: '立即報名'
+      },
       discount: {
         title: '學生優惠',
         content: '報到時出示有效學生證，可享 NT$ 500 折扣。'
       },
-      packages: {
-        valuePack: {
-          label: 'Value Pack',
-          title: '比賽 + 毛巾/衣服',
-          comingSoon: 'Coming Soon',
-          priceTbd: 'Price TBD',
-          mostPopular: 'Most Popular',
-          items: [
-            '包含所有基本方案內容',
-            'TKO 限定運動毛巾',
-            '或 紀念T-shirt (二擇一)'
-          ],
-          button: '即將開放'
-        },
-        fullGear: {
-          label: 'Full Gear',
-          title: '大全配',
-          comingSoon: 'Coming Soon',
-          priceTbd: 'Price TBD',
-          items: [
-            '包含所有基本方案內容',
-            'TKO 限定運動毛巾',
-            'TKO 紀念T-shirt',
-            '最完整的賽事紀念'
-          ],
-          button: '即將開放'
-        }
-      },
-      notes: '＊各組別說明：新手、初階、進階、挑戰組不可重複報名。',
+      notes: '＊以上皆含貼紙包、參賽證。',
       proNote: '＊Freestyle PRO 組如人數不足 8 位，則取消 PRO 組，並編列進公開組一起比賽。'
     }
   },

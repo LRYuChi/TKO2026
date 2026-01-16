@@ -66,7 +66,8 @@ export const en = {
     subtitle: 'REGISTRATION',
     method: {
       title: 'Registration Method',
-      content: 'Registration will be conducted through a Google Form. The registration form is scheduled to open in January.'
+      content: 'Registration Period: Jan 16, 2026 (Fri) – Feb 15, 2026 (Sun)',
+      note: '＊Please complete your registration within the deadline. Late registrations will not be accepted.'
     },
     divisions: {
       title: 'Divisions',
@@ -91,46 +92,37 @@ export const en = {
     },
     fees: {
       title: 'Registration Fees & Packages',
-      basic: {
+      registrationUrl: 'https://forms.gle/Ubksz7Gb92RAjwMu7',
+      planA: {
+        label: '(A) Basic Plan',
         price: 'NT$ 1,500',
-        name: 'Competition-Only Package',
-        includes: 'Includes: Stickers + TKO Merchandise',
-        button: 'Coming Soon'
+        includes: 'Includes: 【TKO Tote Bag + Pin】',
+        button: 'Register Now'
       },
-      moreInfo: 'More merchandise bundle options will be released soon.',
+      planB: {
+        label: '(B) Towel Pack',
+        price: 'NT$ 1,800',
+        includes: 'Includes: 【TKO Towel + Tote Bag + Pin】',
+        button: 'Register Now'
+      },
+      planC: {
+        label: '(C) Tee Pack',
+        price: 'NT$ 2,100',
+        includes: 'Includes: 【TKO Tee + Tote Bag + Pin】',
+        button: 'Register Now'
+      },
+      planD: {
+        label: '(D) Full Package',
+        labelTag: 'Recommended',
+        price: 'NT$ 3,200',
+        includes: 'Includes: 【TKO Tee + Towel + Socks + Poster + Keychain + Tote Bag + Pin】',
+        button: 'Register Now'
+      },
       discount: {
         title: 'Student Discount',
         content: 'Students who present a valid student ID at check-in will receive a NT$ 500 discount.'
       },
-      packages: {
-        valuePack: {
-          label: 'Value Pack',
-          title: 'Competition + Towel/Apparel',
-          comingSoon: 'Coming Soon',
-          priceTbd: 'Price TBD',
-          mostPopular: 'Most Popular',
-          items: [
-            'Includes all basic package contents',
-            'TKO Limited Edition Sports Towel',
-            'Or Commemorative T-shirt (Choose One)'
-          ],
-          button: 'Coming Soon'
-        },
-        fullGear: {
-          label: 'Full Gear',
-          title: 'Full Package',
-          comingSoon: 'Coming Soon',
-          priceTbd: 'Price TBD',
-          items: [
-            'Includes all basic package contents',
-            'TKO Limited Edition Sports Towel',
-            'TKO Commemorative T-shirt',
-            'Most complete event memorabilia'
-          ],
-          button: 'Coming Soon'
-        }
-      },
-      notes: '* Division Guidelines: Players may only register for one of First Timer, Beginner, Intermediate, or Expert.',
+      notes: '* All packages include sticker pack and competition badge.',
       proNote: '*If the Freestyle PRO Division has fewer than 8 registrants, the PRO Division will be cancelled and merged into the Open Division.'
     }
   },
@@ -215,7 +207,7 @@ export const en = {
         'Lighthouse, Trade Spike',
         'Stuntplane Fasthands',
         'Tama Cat, Spike',
-        '▲ Stilt, In',  
+        '▲ Stilt, In',
         '▲ Inward Swing Spike, Earth Turn'
       ]
     },

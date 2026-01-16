@@ -1,9 +1,14 @@
 import React from 'react';
-import { Check, ArrowRight } from 'lucide-react';
+import { Check } from 'lucide-react';
 import { useTranslation } from '../hooks/useTranslation';
 
 const Registration: React.FC = () => {
   const { t } = useTranslation();
+
+  const handleRegister = () => {
+    window.open(t.registration.fees.registrationUrl, '_blank');
+  };
+
   return (
     <section id="registration" className="py-24 bg-tko-black scroll-mt-20 border-t border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -13,86 +18,87 @@ const Registration: React.FC = () => {
           <p className="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed-plus">
             {t.registration.method.content}
           </p>
+          <p className="text-gray-400 text-sm max-w-2xl mx-auto mt-3">
+            {t.registration.method.note}
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {/* Option 1 */}
-          <div className="bg-neutral-900 p-8 flex flex-col border border-white/10 hover:border-white transition-all duration-300 shadow-sm hover:shadow-glow">
-            <div className="mb-4">
-              <span className="text-gray-400 text-sm font-bold uppercase tracking-widest">Entry Level</span>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+          {/* Plan A - Basic */}
+          <div className="bg-neutral-900 p-6 flex flex-col border border-white/10 hover:border-white transition-all duration-300 shadow-sm hover:shadow-glow">
+            <h3 className="text-xl font-heading font-bold text-white mb-2">{t.registration.fees.planA.label}</h3>
+            <div className="text-3xl font-heading font-bold text-white mb-4">{t.registration.fees.planA.price}</div>
+            <div className="text-gray-300 text-sm mb-6 pb-6 border-b border-white/10">
+              {t.registration.fees.planA.includes}
             </div>
-            <h3 className="text-2xl font-heading font-bold text-white mb-2">{t.registration.fees.basic.name}</h3>
-            <div className="text-4xl font-heading font-bold text-white mb-6">{t.registration.fees.basic.price}</div>
-            <ul className="space-y-4 mb-8 flex-grow border-t border-white/10 pt-6">
-              <li className="flex items-start">
-                <Check className="w-5 h-5 text-tko-green mr-3 flex-shrink-0 mt-0.5" />
-                <span className="text-gray-300 text-base">{t.registration.fees.basic.includes}</span>
-              </li>
-            </ul>
-            <button className="w-full py-4 bg-white/10 hover:bg-white text-white hover:text-black font-bold uppercase tracking-widest transition-colors">
-              {t.registration.fees.basic.button}
+            <button
+              onClick={handleRegister}
+              className="w-full py-3 bg-white/10 hover:bg-white text-white hover:text-black font-bold uppercase tracking-widest transition-colors text-sm mt-auto"
+            >
+              {t.registration.fees.planA.button}
             </button>
           </div>
 
-          {/* Option 2 (Highlighted) */}
-          <div className="bg-tko-yellow p-8 flex flex-col transform md:-translate-y-4 shadow-2xl relative">
-             <div className="absolute top-4 right-4 bg-black text-white text-xs font-bold px-2 py-1 uppercase tracking-widest">{t.registration.fees.packages.valuePack.mostPopular}</div>
-            <div className="mb-4">
-              <span className="text-black/60 text-sm font-bold uppercase tracking-widest">{t.registration.fees.packages.valuePack.label}</span>
+          {/* Plan B - Towel Pack */}
+          <div className="bg-neutral-900 p-6 flex flex-col border border-white/10 hover:border-white transition-all duration-300 shadow-sm hover:shadow-glow">
+            <h3 className="text-xl font-heading font-bold text-white mb-2">{t.registration.fees.planB.label}</h3>
+            <div className="text-3xl font-heading font-bold text-white mb-4">{t.registration.fees.planB.price}</div>
+            <div className="text-gray-300 text-sm mb-6 pb-6 border-b border-white/10">
+              {t.registration.fees.planB.includes}
             </div>
-            <h3 className="text-2xl font-heading font-bold text-black mb-2">{t.registration.fees.packages.valuePack.title}</h3>
-            <div className="text-4xl font-heading font-bold text-black mb-1">
-                {t.registration.fees.packages.valuePack.comingSoon}
-            </div>
-             <div className="text-sm text-black/60 mb-6 uppercase tracking-wide">{t.registration.fees.packages.valuePack.priceTbd}</div>
-            <ul className="space-y-4 mb-8 flex-grow border-t border-black/10 pt-6">
-              {t.registration.fees.packages.valuePack.items.map((item, index) => (
-                <li key={index} className="flex items-start">
-                  <Check className="w-5 h-5 text-black mr-3 flex-shrink-0 mt-0.5" />
-                  <span className="text-black/80 text-base">{item}</span>
-                </li>
-              ))}
-            </ul>
-            <button className="w-full py-4 bg-black hover:bg-neutral-800 text-tko-yellow font-bold uppercase tracking-widest transition-colors">
-              {t.registration.fees.packages.valuePack.button}
+            <button
+              onClick={handleRegister}
+              className="w-full py-3 bg-white/10 hover:bg-white text-white hover:text-black font-bold uppercase tracking-widest transition-colors text-sm mt-auto"
+            >
+              {t.registration.fees.planB.button}
             </button>
           </div>
 
-          {/* Option 3 */}
-          <div className="bg-neutral-900 p-8 flex flex-col border border-white/10 hover:border-tko-red transition-all duration-300 shadow-sm hover:shadow-glow-red">
-            <div className="mb-4">
-              <span className="text-gray-400 text-sm font-bold uppercase tracking-widest">{t.registration.fees.packages.fullGear.label}</span>
+          {/* Plan C - Tee Pack */}
+          <div className="bg-neutral-900 p-6 flex flex-col border border-white/10 hover:border-white transition-all duration-300 shadow-sm hover:shadow-glow">
+            <h3 className="text-xl font-heading font-bold text-white mb-2">{t.registration.fees.planC.label}</h3>
+            <div className="text-3xl font-heading font-bold text-white mb-4">{t.registration.fees.planC.price}</div>
+            <div className="text-gray-300 text-sm mb-6 pb-6 border-b border-white/10">
+              {t.registration.fees.planC.includes}
             </div>
-            <h3 className="text-2xl font-heading font-bold text-white mb-2">{t.registration.fees.packages.fullGear.title}</h3>
-            <div className="text-4xl font-heading font-bold text-tko-red mb-1">{t.registration.fees.packages.fullGear.comingSoon}</div>
-             <div className="text-sm text-gray-500 mb-6 uppercase tracking-wide">{t.registration.fees.packages.fullGear.priceTbd}</div>
-            <ul className="space-y-4 mb-8 flex-grow border-t border-white/10 pt-6">
-              {t.registration.fees.packages.fullGear.items.map((item, index) => (
-                <li key={index} className="flex items-start">
-                  <Check className="w-5 h-5 text-tko-red mr-3 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-300 text-base">{item}</span>
-                </li>
-              ))}
-            </ul>
-            <button className="w-full py-4 bg-white/10 hover:bg-tko-red text-white hover:text-white font-bold uppercase tracking-widest transition-colors">
-              {t.registration.fees.packages.fullGear.button}
+            <button
+              onClick={handleRegister}
+              className="w-full py-3 bg-white/10 hover:bg-white text-white hover:text-black font-bold uppercase tracking-widest transition-colors text-sm mt-auto"
+            >
+              {t.registration.fees.planC.button}
+            </button>
+          </div>
+
+          {/* Plan D - Full Package (Highlighted) */}
+          <div className="bg-tko-yellow p-6 flex flex-col relative shadow-2xl transform lg:scale-105">
+            <div className="absolute top-4 right-4 bg-black text-white text-xs font-bold px-2 py-1 uppercase tracking-widest">{t.registration.fees.planD.labelTag}</div>
+            <h3 className="text-xl font-heading font-bold text-black mb-2">{t.registration.fees.planD.label}</h3>
+            <div className="text-3xl font-heading font-bold text-black mb-4">{t.registration.fees.planD.price}</div>
+            <div className="text-black/80 text-sm mb-6 pb-6 border-b border-black/10">
+              {t.registration.fees.planD.includes}
+            </div>
+            <button
+              onClick={handleRegister}
+              className="w-full py-3 bg-black hover:bg-neutral-800 text-tko-yellow font-bold uppercase tracking-widest transition-colors text-sm mt-auto"
+            >
+              {t.registration.fees.planD.button}
             </button>
           </div>
         </div>
 
         <div className="mt-12 text-center">
-            <div className="inline-flex items-center gap-4 bg-neutral-900 px-8 py-4 border border-tko-yellow shadow-[4px_4px_0px_0px_#FF9B24]">
-                <span className="text-3xl">🎓</span>
-                <div className="text-left">
-                    <div className="text-white font-bold text-base uppercase tracking-wide">{t.registration.fees.discount.title}</div>
-                    <div className="text-base text-gray-400">{t.registration.fees.discount.content}</div>
-                </div>
+          <div className="inline-flex items-center gap-4 bg-neutral-900 px-8 py-4 border border-tko-yellow shadow-[4px_4px_0px_0px_#FF9B24]">
+            <span className="text-3xl">🎓</span>
+            <div className="text-left">
+              <div className="text-white font-bold text-base uppercase tracking-wide">{t.registration.fees.discount.title}</div>
+              <div className="text-base text-gray-400">{t.registration.fees.discount.content}</div>
             </div>
+          </div>
         </div>
-        
+
         <div className="mt-8 text-center text-sm text-gray-400 font-mono">
-            {t.registration.fees.notes}<br/>
-            {t.registration.fees.proNote}
+          {t.registration.fees.notes}<br />
+          {t.registration.fees.proNote}
         </div>
 
       </div>
