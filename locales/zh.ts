@@ -11,7 +11,11 @@ export const zh = {
     subtitle: 'OFFICIAL EVENT 2026',
     date: '2026年4月18日',
     location: '台北市',
-    description: '台灣最盛大的劍玉賽事即將登場'
+    description: '台灣最盛大的劍玉賽事即將登場',
+    eventDate: {
+      dates: '2026 / 03 / 28（六）- 29（日）',
+      location: '高雄市'
+    }
   },
   eventDetails: {
     title: '活動內容',
@@ -124,6 +128,12 @@ export const zh = {
       },
       notes: '＊以上皆含貼紙包、參賽證。',
       proNote: '＊Freestyle PRO 組如人數不足 8 位，則取消 PRO 組，並編列進公開組一起比賽。'
+    },
+    merchandise: {
+      title: 'TKO 周邊商品',
+      subtitle: 'OFFICIAL MERCHANDISE',
+      description: '精選 TKO 2026 官方周邊商品展示',
+      note: '＊商品數量有限，實際販售詳情請關注 TKO 官方公告。'
     }
   },
   rules: {

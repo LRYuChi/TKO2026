@@ -86,6 +86,61 @@ const Registration: React.FC = () => {
           </div>
         </div>
 
+        {/* Merchandise Showcase Section */}
+        <div className="mt-20 mb-16">
+          <div className="text-center mb-12">
+            <span className="text-tko-yellow font-bold tracking-extra-wide uppercase text-sm mb-3 block drop-shadow">{t.registration.merchandise.subtitle}</span>
+            <h3 className="text-3xl md:text-5xl font-heading font-extrabold text-white mb-4 tracking-tight">{t.registration.merchandise.title}</h3>
+            <p className="text-gray-300 text-base max-w-2xl mx-auto">{t.registration.merchandise.description}</p>
+          </div>
+
+          <div className="max-w-6xl mx-auto space-y-8">
+            {/* Main Merchandise Showcase Image */}
+            <div className="bg-neutral-900 p-6 border border-white/10 hover:border-tko-yellow transition-all duration-300">
+              <img
+                src="https://lh3.googleusercontent.com/d/10cbuOISqNdCr9nDqjgFJtL7CZaP-R1hN"
+                alt="TKO Merchandise Showcase - Towel, Poster, Tote Bag, Pin, Keychain, Lighter"
+                className="w-full h-auto"
+                referrerPolicy="no-referrer"
+                onError={(e) => {
+                  e.currentTarget.src = 'https://via.placeholder.com/1200x800/1a1a1a/ffffff?text=TKO+Merchandise+Collection';
+                }}
+              />
+            </div>
+
+            {/* Tee and Socks Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="bg-neutral-900 p-6 border border-white/10 hover:border-tko-yellow transition-all duration-300">
+                <img
+                  src="https://lh3.googleusercontent.com/d/1TNU4Btf9H2e83Xz-DYoOALjKCj0nR4pZ"
+                  alt="TKO Tee Black - Front and Back"
+                  className="w-full h-auto"
+                  referrerPolicy="no-referrer"
+                  onError={(e) => {
+                    e.currentTarget.src = 'https://via.placeholder.com/600x400/1a1a1a/ffffff?text=TKO+Tee';
+                  }}
+                />
+                <p className="text-gray-400 text-sm mt-3">S / M / L / XL / 2XL / 3XL</p>
+              </div>
+
+              <div className="bg-neutral-900 p-6 border border-white/10 hover:border-tko-yellow transition-all duration-300">
+                <img
+                  src="https://lh3.googleusercontent.com/d/1sqFVIXBrqQItjZ0OtvG-DGUkSvhiQR-b"
+                  alt="TKO Socks Black"
+                  className="w-full h-auto"
+                  referrerPolicy="no-referrer"
+                  onError={(e) => {
+                    e.currentTarget.src = 'https://via.placeholder.com/600x400/1a1a1a/ffffff?text=TKO+Socks';
+                  }}
+                />
+                <p className="text-gray-400 text-sm mt-3">Free Size</p>
+              </div>
+            </div>
+          </div>
+
+          <p className="text-gray-500 text-sm text-center mt-8">{t.registration.merchandise.note}</p>
+        </div>
+
         <div className="mt-12 text-center">
           <div className="inline-flex items-center gap-4 bg-neutral-900 px-8 py-4 border border-tko-yellow shadow-[4px_4px_0px_0px_#FF9B24]">
             <span className="text-3xl">🎓</span>

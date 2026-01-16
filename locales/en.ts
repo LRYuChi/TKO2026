@@ -11,7 +11,11 @@ export const en = {
     subtitle: 'OFFICIAL EVENT 2026',
     date: 'April 18, 2026',
     location: 'Taipei City',
-    description: "Taiwan's Biggest Kendama Competition"
+    description: "Taiwan's Biggest Kendama Competition",
+    eventDate: {
+      dates: 'Mar 28 (Sat) - 29 (Sun), 2026',
+      location: 'Kaohsiung City'
+    }
   },
   eventDetails: {
     title: 'Event Content',
@@ -124,6 +128,12 @@ export const en = {
       },
       notes: '* All packages include sticker pack and competition badge.',
       proNote: '*If the Freestyle PRO Division has fewer than 8 registrants, the PRO Division will be cancelled and merged into the Open Division.'
+    },
+    merchandise: {
+      title: 'TKO Merchandise',
+      subtitle: 'OFFICIAL MERCHANDISE',
+      description: 'Official TKO 2026 merchandise showcase',
+      note: '* Limited quantity. For purchasing details, please follow official TKO announcements.'
     }
   },
   rules: {
