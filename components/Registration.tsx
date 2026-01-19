@@ -98,7 +98,7 @@ const Registration: React.FC = () => {
             {/* Main Merchandise Showcase Image */}
             <div className="bg-neutral-900 p-6 border border-white/10 hover:border-tko-yellow transition-all duration-300">
               <img
-                src="https://lh3.googleusercontent.com/d/1hpnO1TwVwzqFZPqKpxJ0AuNDxxODClhi"
+                src="https://lh3.googleusercontent.com/d/1hZFK9YMS1q9YJafiZpQFDhGDabdQbVWa"
                 alt="TKO Merchandise Showcase - Towel, Poster, Tote Bag, Pin, Keychain, Lighter"
                 className="w-full h-auto"
                 referrerPolicy="no-referrer"
