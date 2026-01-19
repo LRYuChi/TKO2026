@@ -70,7 +70,7 @@ export const en = {
     subtitle: 'REGISTRATION',
     method: {
       title: 'Registration Method',
-      content: 'Registration Period: Jan 16, 2026 (Fri) – Feb 15, 2026 (Sun)',
+      content: 'Registration Period: Jan 19, 2026 (Mon) – Feb 15, 2026 (Sun)',
       note: '＊Please complete your registration within the deadline. Late registrations will not be accepted.'
     },
     divisions: {

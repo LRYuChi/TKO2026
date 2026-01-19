@@ -70,7 +70,7 @@ export const zh = {
     subtitle: 'REGISTRATION',
     method: {
       title: '報名方式',
-      content: '報名期限：2026 / 01 / 16（五）～ 2026 / 02 / 15（日）',
+      content: '報名期限：2026 / 01 / 19（一）～ 2026 / 02 / 15（日）',
       note: '＊逾期不受理，請務必在期限內完成報名。'
     },
     divisions: {
