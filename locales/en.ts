@@ -105,7 +105,7 @@ export const en = {
       },
       planB: {
         label: '(B) Towel Pack',
-        price: 'NT$ 1,800',
+        price: 'NT$ 1,700',
         includes: 'Includes: 【TKO Towel + Tote Bag + Pin】',
         button: 'Register Now'
       },
@@ -118,7 +118,7 @@ export const en = {
       planD: {
         label: '(D) Full Package',
         labelTag: 'Recommended',
-        price: 'NT$ 3,200',
+        price: 'NT$ 3,100',
         includes: 'Includes: 【TKO Tee + Towel + Socks + Poster + Keychain + Tote Bag + Pin】',
         button: 'Register Now'
       },

@@ -105,7 +105,7 @@ export const zh = {
       },
       planB: {
         label: '(B) 擦擦汗方案',
-        price: 'NT$ 1,800',
+        price: 'NT$ 1,700',
         includes: '含：【TKO 毛巾 + 帆布袋 + 胸章】',
         button: '立即報名'
       },
@@ -118,7 +118,7 @@ export const zh = {
       planD: {
         label: '(D) 大全套方案',
         labelTag: '推薦',
-        price: 'NT$ 3,200',
+        price: 'NT$ 3,100',
         includes: '含：【TKO Tee + 毛巾 + 襪子 + 海報 + 鑰匙圈 + 帆布袋 + 胸章】',
         button: '立即報名'
       },
