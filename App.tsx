@@ -4,6 +4,7 @@ import ErrorBoundary from './components/ErrorBoundary';
 import ScrollProgress from './components/ScrollProgress';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import Sponsors from './components/Sponsors';
 import Registration from './components/Registration';
 import EventDetails from './components/EventDetails';
 import RulesSection from './components/RulesSection';
@@ -28,6 +29,7 @@ const AppContent: React.FC = () => {
       <Navbar />
       <main className="flex-grow">
         <Hero />
+        <Sponsors />
         <EventDetails />
         <Registration />
         <RulesSection />

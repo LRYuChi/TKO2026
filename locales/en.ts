@@ -318,6 +318,16 @@ export const en = {
     followUs: 'Follow Us',
     rights: '© 2026 Taiwan Kendama Open. All rights reserved.'
   },
+  sponsors: {
+    sectionLabel: 'PARTNERS',
+    title: 'Our Partners',
+    platinumLabel: '✦ PLATINUM PARTNER',
+    goldLabel: 'GOLD PARTNER',
+    silverLabel: 'SILVER PARTNER',
+    platinum: [] as { name: string; logo: string; url?: string; desc?: string }[],
+    gold: [] as { name: string; logo: string; url?: string }[],
+    silver: [] as { name: string; logo: string; url?: string }[]
+  },
   venue: {
     sectionLabel: 'Location',
     title: 'Competition',
@@ -372,7 +382,7 @@ export const en = {
     title: 'FAQ',
     items: [
       { q: 'How do I get to the venue?', a: 'The venue is at No. 99, Penglai Rd., Gushan District, Kaohsiung. Take the Kaohsiung MRT to Yanchengpu or Sizihwan Station, then walk about 10 minutes. Paid parking is available nearby.' },
-      { q: 'Can I register on-site?', a: 'We recommend registering online in advance. On-site registration may be available if spots remain.' },
+      { q: 'Can I register on-site?', a: 'Registration has closed and on-site registration is not available, but you are welcome to join the mini activities at the venue!' },
       { q: 'Is there an age limit?', a: 'No age limit! All kendama enthusiasts are welcome. Participants under 12 are encouraged to be accompanied by a guardian.' },
       { q: 'Is lunch provided?', a: 'Meals are not included in the registration fee. There are many restaurants and food stalls near the venue.' },
       { q: 'Can I attend as a spectator?', a: 'Absolutely! Spectator entry is free. Bring your friends and enjoy the event!' }

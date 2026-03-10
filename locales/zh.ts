@@ -318,6 +318,16 @@ export const zh = {
     followUs: '追蹤我們',
     rights: '© 2026 Taiwan Kendama Open. All rights reserved.'
   },
+  sponsors: {
+    sectionLabel: 'PARTNERS',
+    title: '合作夥伴',
+    platinumLabel: '✦ 白金贊助 PLATINUM',
+    goldLabel: '金級贊助 GOLD',
+    silverLabel: '銀級贊助 SILVER',
+    platinum: [] as { name: string; logo: string; url?: string; desc?: string }[],
+    gold: [] as { name: string; logo: string; url?: string }[],
+    silver: [] as { name: string; logo: string; url?: string }[]
+  },
   venue: {
     sectionLabel: 'Location',
     title: '比賽',
@@ -372,7 +382,7 @@ export const zh = {
     title: '常見問題',
     items: [
       { q: '比賽地點怎麼到？', a: '場地位於高雄市鼓山區蓬萊路99號，可搭乘高雄捷運至鹽埕埔站或西子灣站，步行約10分鐘即可抵達。開車可使用附近收費停車場。' },
-      { q: '可以現場報名嗎？', a: '建議事先線上報名以確保名額。若報名未額滿，活動當天亦可現場補報名。' },
+      { q: '可以現場報名嗎？', a: '賽事報名已截止，現場不開放報名，但歡迎到場參與現場的小活動！' },
       { q: '有年齡限制嗎？', a: '沒有年齡限制，歡迎所有年齡層的劍玉愛好者參加！未滿12歲的參賽者建議由家長陪同。' },
       { q: '比賽有提供午餐嗎？', a: '報名費不含餐點。場地周邊有許多餐廳與小吃，也歡迎自備午餐。' },
       { q: '可以只來觀賽不參賽嗎？', a: '當然可以！觀賽免費入場，歡迎攜伴前來感受劍玉的魅力。' }

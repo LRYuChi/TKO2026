@@ -36,10 +36,10 @@ const Venue: React.FC = () => {
         </AnimatedSection>
 
         {/* Map + Photo Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto items-stretch">
           {/* Google Maps Embed */}
           <AnimatedSection direction="left">
-            <div className="aspect-[4/3] rounded-lg overflow-hidden border border-white/10">
+            <div className="rounded-lg overflow-hidden border border-white/10 h-full">
               <iframe
                 title="比賽地點地圖"
                 src={`https://maps.google.com/maps?q=${mapQuery}&output=embed`}
