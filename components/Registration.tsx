@@ -28,7 +28,7 @@ const Registration: React.FC = () => {
   const { t } = useTranslation();
 
   const handleRegister = () => {
-    window.open(t.registration.fees.registrationUrl, '_blank');
+    window.open(t.registration.fees.registrationUrl, '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -92,7 +92,7 @@ const Registration: React.FC = () => {
 
           {/* Plan D - Highlighted */}
           <AnimatedSection delay={0.3}>
-            <div className="bg-tko-yellow p-6 flex flex-col relative shadow-2xl transform lg:scale-105 hover:-translate-y-1 transition-all duration-300 h-full">
+            <div className="bg-tko-yellow p-6 flex flex-col relative shadow-2xl ring-2 ring-tko-yellow ring-offset-2 ring-offset-tko-black hover:-translate-y-1 transition-all duration-300 h-full">
               <div className="absolute top-4 right-4 bg-black text-white text-xs font-bold px-2 py-1 uppercase tracking-widest">{t.registration.fees.planD.labelTag}</div>
               <h3 className="text-xl font-heading font-bold text-black mb-2">{t.registration.fees.planD.label}</h3>
               <PriceCounter price={t.registration.fees.planD.price} className="text-3xl font-heading font-bold text-black mb-4" />

@@ -59,8 +59,8 @@ const RulesSection: React.FC = () => {
             </div>
 
             {/* Tabs Navigation */}
-            <div className="flex justify-center mb-12">
-                <div className="inline-flex flex-wrap justify-center gap-4">
+            <div className="flex justify-center mb-12 overflow-x-auto">
+                <div className="inline-flex flex-nowrap gap-4">
                     {tabs.map((tab) => (
                         <button
                             key={tab.id}

@@ -1,13 +1,15 @@
 import React, { useEffect } from 'react';
 import { LanguageProvider, LanguageContext } from './contexts/LanguageContext';
+import ErrorBoundary from './components/ErrorBoundary';
 import ScrollProgress from './components/ScrollProgress';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Registration from './components/Registration';
 import EventDetails from './components/EventDetails';
 import RulesSection from './components/RulesSection';
-// import Schedule from './components/Schedule';
+import Schedule from './components/Schedule';
 import Venue from './components/Venue';
+import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 
 const AppContent: React.FC = () => {
@@ -29,8 +31,9 @@ const AppContent: React.FC = () => {
         <EventDetails />
         <Registration />
         <RulesSection />
-        {/* <Schedule /> */}
+        <Schedule />
         <Venue />
+        <FAQ />
       </main>
       <Footer />
     </div>
@@ -39,9 +42,11 @@ const AppContent: React.FC = () => {
 
 const App: React.FC = () => {
   return (
-    <LanguageProvider>
-      <AppContent />
-    </LanguageProvider>
+    <ErrorBoundary>
+      <LanguageProvider>
+        <AppContent />
+      </LanguageProvider>
+    </ErrorBoundary>
   );
 };
 

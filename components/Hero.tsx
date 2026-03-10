@@ -2,6 +2,7 @@ import React from 'react';
 import { ChevronDown } from 'lucide-react';
 import { useTranslation } from '../hooks/useTranslation';
 import { motion, useScroll, useTransform, useReducedMotion } from 'framer-motion';
+import CountdownTimer from './CountdownTimer';
 
 const Hero: React.FC = () => {
   const { t } = useTranslation();
@@ -69,6 +70,9 @@ const Hero: React.FC = () => {
               src={MAIN_VISUAL_SRC}
               alt="OFFICIAL EVENT TAIWAN KENDAMA OPEN 2026 - 3/28(Sat)-3/29(Sun) Kaohsiung, Taiwan"
               className="w-full h-auto max-h-[60vh] md:max-h-[70vh] object-contain drop-shadow-2xl"
+              width={1200}
+              height={800}
+              fetchPriority="high"
               referrerPolicy="no-referrer"
               onError={(e) => {
                 e.currentTarget.style.display = 'none';
@@ -104,13 +108,18 @@ const Hero: React.FC = () => {
             </p>
           </div>
 
+          {/* Countdown Timer */}
+          <motion.div className="mb-8" {...fadeUp(0.5)}>
+            <CountdownTimer />
+          </motion.div>
+
           {/* Action Buttons */}
           <motion.div className="flex flex-col sm:flex-row gap-6 justify-center w-full max-w-lg mt-2 mx-auto" {...fadeUp(0.6)}>
-            <a href="#registration" onClick={(e) => scrollToSection(e, 'registration')} className="group relative px-8 py-4 bg-tko-yellow text-tko-black font-bold text-lg uppercase tracking-widest overflow-hidden transition-all hover:bg-white">
+            <a href="#registration" onClick={(e) => scrollToSection(e, 'registration')} className="group relative w-full sm:w-auto text-center px-8 py-4 bg-tko-yellow text-tko-black font-bold text-lg uppercase tracking-widest overflow-hidden transition-all hover:bg-white">
               <div className="absolute inset-0 w-full h-full bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div>
               <span className="relative z-10">{t.nav.registerNow}</span>
             </a>
-            <a href="#rules" onClick={(e) => scrollToSection(e, 'rules')} className="px-8 py-4 border border-white/30 hover:border-tko-green text-white hover:text-tko-green font-bold text-lg uppercase tracking-widest transition-all hover:bg-white/5">
+            <a href="#rules" onClick={(e) => scrollToSection(e, 'rules')} className="w-full sm:w-auto text-center px-8 py-4 border border-white/30 hover:border-tko-green text-white hover:text-tko-green font-bold text-lg uppercase tracking-widest transition-all hover:bg-white/5">
               {t.nav.rules}
             </a>
           </motion.div>

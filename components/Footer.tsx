@@ -26,13 +26,13 @@ const Footer: React.FC = () => {
               <div id="footer-text-title" className="hidden">
                    <h3 className="text-3xl font-heading font-bold mb-2 tracking-tighter">TKO <span className="text-tko-yellow">2026</span></h3>
               </div>
-              <p className="text-sm text-gray-500 font-mono tracking-widest uppercase">{t.footer.subtitle}</p>
+              <p className="text-sm text-gray-400 font-mono tracking-widest uppercase">{t.footer.subtitle}</p>
             </div>
 
             <div className="flex gap-8">
-              <a href="https://www.instagram.com/twkendamaopen/" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-tko-yellow hover:scale-110 hover:-translate-y-1 transition-all duration-200"><Instagram size={28} /></a>
-              <a href="https://www.facebook.com/profile.php?id=61584467373517" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-white hover:scale-110 hover:-translate-y-1 transition-all duration-200"><Facebook size={28} /></a>
-              <a href="#" className="text-gray-500 hover:text-tko-green hover:scale-110 hover:-translate-y-1 transition-all duration-200"><Mail size={28} /></a>
+              <a href="https://www.instagram.com/twkendamaopen/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-gray-400 hover:text-tko-yellow hover:scale-110 hover:-translate-y-1 transition-all duration-200"><Instagram size={28} /></a>
+              <a href="https://www.facebook.com/profile.php?id=61584467373517" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-gray-400 hover:text-white hover:scale-110 hover:-translate-y-1 transition-all duration-200"><Facebook size={28} /></a>
+              <a href="mailto:persempre080709@gmail.com" aria-label="Email" className="text-gray-400 hover:text-tko-green hover:scale-110 hover:-translate-y-1 transition-all duration-200"><Mail size={28} /></a>
             </div>
 
             <div className="text-center md:text-right text-sm text-gray-600 font-mono">

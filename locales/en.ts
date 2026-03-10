@@ -323,5 +323,60 @@ export const en = {
     title: 'Competition',
     titleHighlight: 'Venue',
     address: 'No. 99, Penglai Rd., Gushan Dist., Kaohsiung City 804'
+  },
+  schedule: {
+    titleLine1: 'Event',
+    titleLine2: 'Schedule',
+    day1: {
+      subtitle: 'QUALIFIERS Day',
+      items: [
+        'Player Check-in',
+        'Opening Ceremony',
+        'Novice Speed Qualifiers (Top 5)',
+        'Beginner Speed Qualifiers (Top 5)',
+        'Mini Game: Kendama Musical Chairs / Ken Game',
+        'Novice Designated Qualifiers (Top 4)',
+        'Beginner Designated Qualifiers (Top 4)',
+        'Advanced Designated Qualifiers (Top 8)',
+        'Challenge Designated Qualifiers (Top 8)',
+        'Mini Game: 1-2-3 Freeze',
+        'Freestyle Qualifiers (Top 16)',
+        'Mini Game: Kendama Quiz'
+      ]
+    },
+    day2: {
+      subtitle: 'FINALS Day',
+      items: [
+        'Finals Player Check-in',
+        'Novice Speed Finals',
+        'Beginner Speed Finals / Ken Game Finals',
+        'Mini Game: Charades',
+        'Novice Designated Finals',
+        'Beginner Designated Finals',
+        'Advanced Designated Finals',
+        'Challenge Designated Finals',
+        'Mini Game: Three-Legged Candle Race',
+        'Freestyle Finals',
+        'Mini Game: Spike & Lunar Challenge',
+        'Awards Ceremony / Group Photo'
+      ]
+    }
+  },
+  countdown: {
+    days: 'Days',
+    hours: 'Hrs',
+    minutes: 'Min',
+    seconds: 'Sec'
+  },
+  faq: {
+    title: 'FAQ',
+    items: [
+      { q: 'How do I get to the venue?', a: 'The venue is at No. 99, Penglai Rd., Gushan District, Kaohsiung. Take the Kaohsiung MRT to Yanchengpu or Sizihwan Station, then walk about 10 minutes. Paid parking is available nearby.' },
+      { q: 'Do I need to bring my own kendama?', a: 'Yes, players must bring their own kendama. Competition-grade kendama (JKA certified or equivalent) is required for Designated and Speed events. Freestyle has no restrictions.' },
+      { q: 'Can I register on-site?', a: 'We recommend registering online in advance. On-site registration may be available if spots remain.' },
+      { q: 'Is there an age limit?', a: 'No age limit! All kendama enthusiasts are welcome. Participants under 12 are encouraged to be accompanied by a guardian.' },
+      { q: 'Is lunch provided?', a: 'Meals are not included in the registration fee. There are many restaurants and food stalls near the venue.' },
+      { q: 'Can I attend as a spectator?', a: 'Absolutely! Spectator entry is free. Bring your friends and enjoy the event!' }
+    ]
   }
 };

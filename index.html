@@ -3,165 +3,57 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>臺灣劍玉公開賽Taiwan Kendama Open</title>
+    <title>TKO 2026 臺灣劍玉公開賽 Taiwan Kendama Open | 高雄 Kaohsiung</title>
+    <meta name="description" content="2026 臺灣劍玉公開賽 Taiwan Kendama Open — 3/28-3/29 於高雄舉辦。速度賽、指定賽、Ken Game、Freestyle 四大項目，歡迎所有玩家參賽！" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="TKO 2026 臺灣劍玉公開賽 Taiwan Kendama Open" />
+    <meta property="og:description" content="2026 臺灣劍玉公開賽 — 3/28-3/29 高雄。速度賽、指定賽、Ken Game、Freestyle，歡迎參賽！" />
+    <meta property="og:image" content="https://lh3.googleusercontent.com/d/1dNIOAUOQKVxFUp-JugvdIMxRLQPzhBlh" />
+    <meta property="og:url" content="https://lryuchi.github.io/TKO2026/" />
+    <meta property="og:locale" content="zh_TW" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="TKO 2026 臺灣劍玉公開賽" />
+    <meta name="twitter:description" content="2026 臺灣劍玉公開賽 — 3/28-3/29 高雄。歡迎參賽！" />
+    <meta name="twitter:image" content="https://lh3.googleusercontent.com/d/1dNIOAUOQKVxFUp-JugvdIMxRLQPzhBlh" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "TKO 2026 臺灣劍玉公開賽 Taiwan Kendama Open",
+      "startDate": "2026-03-28",
+      "endDate": "2026-03-29",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "location": {
+        "@type": "Place",
+        "name": "高雄市鼓山區",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "蓬萊路99號",
+          "addressLocality": "高雄市",
+          "addressRegion": "鼓山區",
+          "postalCode": "804",
+          "addressCountry": "TW"
+        }
+      },
+      "description": "臺灣劍玉公開賽，速度賽、指定賽、Ken Game、Freestyle 四大項目"
+    }
+    </script>
+
     <!-- Favicon / Site Icon -->
     <link rel="icon" href="https://drive.google.com/uc?export=view&id=17pdbWsG9ZXzfpXo-UmR04dmvrc4pQy6M" type="image/png" />
     <link rel="apple-touch-icon" href="https://drive.google.com/uc?export=view&id=17pdbWsG9ZXzfpXo-UmR04dmvrc4pQy6M" />
-    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- 優化字體載入：中文使用 Noto Sans TC，英文標題使用 Bebas Neue，內文使用 Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700;900&family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['"Noto Sans TC"', '"Inter"', 'system-ui', 'sans-serif'],
-              heading: ['"Bebas Neue"', '"Noto Sans TC"', 'sans-serif'],
-              mono: ['"JetBrains Mono"', 'Consolas', 'monospace'],
-            },
-            letterSpacing: {
-              'tightest': '-0.075em',
-              'extra-wide': '0.2em',
-            },
-            lineHeight: {
-              'relaxed-plus': '1.75',
-            },
-            colors: {
-              tko: {
-                yellow: '#FF9B24', // C:0 M:39 Y:86 K:0
-                green: '#008A40',  // C:100 M:46 Y:75 K:0 (Previously Teal)
-                red: '#FF3033',    // C:0 M:81 Y:80 K:0
-                black: '#121212',
-                dark: '#1D1D1D',
-                gray: '#2A2A2A',   // Darkened gray for dark theme consistency
-                light: '#F3F4F6'
-              }
-            },
-            backgroundImage: {
-              'grid-pattern': "linear-gradient(to right, #333 1px, transparent 1px), linear-gradient(to bottom, #333 1px, transparent 1px)",
-            }
-          }
-        }
-      }
-    </script>
-    <style>
-      /* 全局字體優化 */
-      html, body {
-        font-family: 'Noto Sans TC', 'Inter', sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        text-rendering: optimizeLegibility;
-      }
-
-      /* 中文字體優化 */
-      html.lang-zh {
-        letter-spacing: 0.02em;
-      }
-      
-      html.lang-zh h1,
-      html.lang-zh h2,
-      html.lang-zh h3 {
-        letter-spacing: 0.05em;
-        font-weight: 700;
-      }
-
-      /* 英文字體優化 */
-      html.lang-en {
-        letter-spacing: 0.01em;
-      }
-      
-      html.lang-en h1,
-      html.lang-en h2,
-      html.lang-en h3 {
-        letter-spacing: 0.02em;
-        font-weight: 800;
-      }
-
-      /* 標題字體加強 */
-      .font-heading {
-        font-weight: 700;
-        line-height: 1.1;
-      }
-
-      /* 段落優化 */
-      p {
-        line-height: 1.75;
-      }
-
-      html.lang-zh p {
-        letter-spacing: 0.03em;
-      }
-
-      html.lang-en p {
-        letter-spacing: 0.005em;
-      }
-
-      /* 數字和百分比優化 */
-      .numeric {
-        font-variant-numeric: tabular-nums;
-        font-feature-settings: "tnum";
-      }
-
-      /* Custom scrollbar for better aesthetics */
-      ::-webkit-scrollbar {
-        width: 8px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #121212; 
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #444; 
-        border-radius: 4px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #FF9B24; 
-      }
-      .font-outline-2 {
-        -webkit-text-stroke: 2px currentColor;
-      }
-      /* Text Highlight Selection */
-      ::selection {
-        background: #FF9B24;
-        color: #121212;
-      }
-
-      /* Animations */
-      @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
-      }
-      .animate-fade-in { animation: fadeIn 0.5s ease-out forwards; }
-
-      @keyframes fadeInUp {
-        from { opacity: 0; transform: translateY(30px); }
-        to { opacity: 1; transform: translateY(0); }
-      }
-      .animate-fade-in-up { animation: fadeInUp 0.8s ease-out forwards; }
-
-      @keyframes pulse-glow {
-        0%, 100% { box-shadow: 0 0 8px rgba(0, 138, 64, 0.4); }
-        50% { box-shadow: 0 0 20px rgba(0, 138, 64, 0.6); }
-      }
-      .animate-pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
-
-      @keyframes shimmer {
-        0% { background-position: -200% 0; }
-        100% { background-position: 200% 0; }
-      }
-
-      /* Reduced motion support */
-      @media (prefers-reduced-motion: reduce) {
-        .animate-fade-in,
-        .animate-fade-in-up,
-        .animate-pulse-glow {
-          animation: none !important;
-          opacity: 1 !important;
-          transform: none !important;
-        }
-      }
-    </style>
   </head>
   <body class="bg-tko-black text-white antialiased">
     <div id="root"></div>

@@ -34,7 +34,7 @@ const Navbar: React.FC = () => {
     { name: t.nav.details, id: 'details' },
     { name: t.nav.registration, id: 'registration' },
     { name: t.nav.rules, id: 'rules' },
-    // { name: t.nav.schedule, id: 'schedule' },
+    { name: t.nav.schedule, id: 'schedule' },
     { name: t.nav.venue, id: 'venue' },
   ];
 
@@ -45,23 +45,22 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between items-center min-h-[64px]">
           <div className="flex-shrink-0 flex items-center gap-3 md:gap-4 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
             
-            {/* Logo Image - 加大尺寸 */}
-            <img 
-                src={LOGO_SRC} 
-                alt="TAIWAN KENDAMA OPEN" 
-                className="h-20 md:h-28 w-auto object-contain drop-shadow-md"
+            {/* Logo Image */}
+            <img
+                src={LOGO_SRC}
+                alt="TAIWAN KENDAMA OPEN"
+                className="h-12 md:h-16 lg:h-20 w-auto object-contain drop-shadow-md"
+                width={80}
+                height={80}
                 onError={(e) => {
                     e.currentTarget.style.display = 'none';
                 }}
             />
 
-            {/* Restored Text Logo - 保留並顯示文字 */}
-            <div className="flex flex-col justify-center">
-                 <span className={`font-heading font-bold text-xl md:text-3xl tracking-tighter leading-none text-white`}>
+            {/* Text Logo - hidden on mobile */}
+            <div className="hidden sm:flex flex-col justify-center">
+                 <span className="font-heading font-bold text-lg md:text-xl tracking-tighter leading-none text-white">
                   TAIWAN <span className="text-tko-yellow">KENDAMA</span> OPEN
-                </span>
-                <span className="text-[10px] md:text-xs font-bold tracking-[0.2em] text-gray-400 uppercase hidden sm:block">
-                    Official Event 2026
                 </span>
             </div>
 
@@ -88,7 +87,7 @@ const Navbar: React.FC = () => {
               className={`px-3 py-2 text-sm font-bold tracking-widest uppercase transition-colors duration-200 flex items-center gap-2 hover:text-tko-yellow ${
                 isScrolled ? 'text-gray-300' : 'text-white/90'
               }`}
-              title="Switch Language"
+              aria-label={language === 'zh' ? 'Switch to English' : '切換為中文'}
             >
               <Globe size={16} />
               <span>{language === 'zh' ? 'EN' : '華'}</span>
@@ -107,7 +106,9 @@ const Navbar: React.FC = () => {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className={`p-2 rounded-md ${isScrolled ? 'text-white' : 'text-white'}`}
+              aria-expanded={isOpen}
+              aria-label={isOpen ? 'Close menu' : 'Open menu'}
+              className="p-2 rounded-md text-white"
             >
               {isOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
@@ -145,7 +146,7 @@ const Navbar: React.FC = () => {
                   setIsOpen(false);
                 }}
                 className="w-full flex items-center justify-center gap-2 px-3 py-4 text-base font-bold text-gray-300 hover:text-tko-yellow hover:bg-white/5 border-b border-white/5"
-                title="Switch Language"
+                aria-label={language === 'zh' ? 'Switch to English' : '切換為中文'}
               >
                 <Globe size={18} />
                 <span>{language === 'zh' ? 'EN' : '華'}</span>
