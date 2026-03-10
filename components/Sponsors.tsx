@@ -28,13 +28,14 @@ const PlatinumCarousel: React.FC<{ sponsors: Sponsor[]; label: string }> = ({ sp
   if (!sponsors.length) return null;
 
   const sponsor = sponsors[current];
+  const hasDesc = sponsor.desc && sponsor.desc.trim().length > 0;
 
   return (
-    <div className="mb-16">
+    <div className="mb-20">
       <p className="text-white/40 text-xs font-mono tracking-[0.3em] uppercase mb-6">{label}</p>
 
       <div
-        className="platinum-card rounded-lg p-8 md:p-12"
+        className="platinum-card rounded-lg p-10 md:p-14 min-h-[200px] flex flex-col justify-center"
         onMouseEnter={() => setPaused(true)}
         onMouseLeave={() => setPaused(false)}
       >
@@ -46,20 +47,25 @@ const PlatinumCarousel: React.FC<{ sponsors: Sponsor[]; label: string }> = ({ sp
             exit={{ opacity: 0, x: -30 }}
             transition={{ duration: 0.4 }}
           >
-            <SponsorLink url={sponsor.url} className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-              <div className="shrink-0 flex items-center justify-center w-full md:w-auto">
+            <SponsorLink
+              url={sponsor.url}
+              className={`flex items-center gap-10 md:gap-14 ${hasDesc ? 'flex-col md:flex-row' : 'flex-col justify-center'}`}
+            >
+              <div className={`shrink-0 flex items-center justify-center ${hasDesc ? 'w-full md:w-auto' : 'w-full'}`}>
                 <img
                   src={sponsor.logo}
                   alt={sponsor.name}
-                  className="h-24 md:h-32 w-auto object-contain max-w-[280px] md:max-w-[360px]"
+                  className={`w-auto object-contain ${hasDesc ? 'h-20 md:h-28 max-w-[260px] md:max-w-[320px]' : 'h-24 md:h-32 max-w-[300px] md:max-w-[400px]'}`}
                   loading="lazy"
                 />
               </div>
-              {sponsor.desc && (
+              {hasDesc ? (
                 <div className="text-center md:text-left flex-1">
                   <h4 className="text-white text-xl md:text-2xl font-bold mb-3">{sponsor.name}</h4>
                   <p className="text-gray-400 text-sm md:text-base leading-relaxed">{sponsor.desc}</p>
                 </div>
+              ) : (
+                <p className="text-white/60 text-sm font-mono tracking-widest uppercase">{sponsor.name}</p>
               )}
             </SponsorLink>
           </motion.div>
@@ -73,8 +79,8 @@ const PlatinumCarousel: React.FC<{ sponsors: Sponsor[]; label: string }> = ({ sp
                 key={i}
                 onClick={() => setCurrent(i)}
                 aria-label={`Go to sponsor ${i + 1}`}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  i === current ? 'bg-white w-6' : 'bg-white/30 hover:bg-white/50'
+                className={`h-2 rounded-full transition-all duration-300 ${
+                  i === current ? 'bg-white w-6' : 'bg-white/30 hover:bg-white/50 w-2'
                 }`}
               />
             ))}
@@ -90,19 +96,19 @@ const GoldGrid: React.FC<{ sponsors: Sponsor[]; label: string }> = ({ sponsors, 
   if (!sponsors.length) return null;
 
   return (
-    <div className="mb-16">
+    <div className="mb-20">
       <p className="text-tko-yellow/60 text-xs font-mono tracking-[0.3em] uppercase mb-6">{label}</p>
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
         {sponsors.map((s, i) => (
-          <AnimatedSection key={i} delay={i * 0.1}>
+          <AnimatedSection key={i} delay={i * 0.05}>
             <SponsorLink
               url={s.url}
-              className="flex items-center justify-center bg-neutral-900/80 border-2 border-tko-yellow/30 rounded-lg p-6 md:p-8 hover:border-tko-yellow hover:shadow-[0_0_20px_rgba(255,155,36,0.2)] transition-all duration-300 h-full"
+              className="flex items-center justify-center bg-neutral-900/80 border-2 border-tko-yellow/30 rounded-lg p-5 md:p-6 hover:border-tko-yellow hover:shadow-[0_0_20px_rgba(255,155,36,0.2)] transition-all duration-300 aspect-[4/3]"
             >
               <img
                 src={s.logo}
                 alt={s.name}
-                className="h-16 md:h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                className="h-12 md:h-16 w-auto max-w-full object-contain grayscale hover:grayscale-0 transition-all duration-300"
                 loading="lazy"
               />
             </SponsorLink>
@@ -120,9 +126,9 @@ const SilverWall: React.FC<{ sponsors: Sponsor[]; label: string }> = ({ sponsors
   return (
     <div>
       <p className="text-white/30 text-xs font-mono tracking-[0.3em] uppercase mb-6">{label}</p>
-      <div className="flex flex-wrap justify-center gap-8 md:gap-12">
+      <div className="flex flex-wrap justify-center gap-6 md:gap-10">
         {sponsors.map((s, i) => (
-          <AnimatedSection key={i} delay={i * 0.05}>
+          <AnimatedSection key={i} delay={i * 0.03}>
             <SponsorLink
               url={s.url}
               className="block opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300"
@@ -130,7 +136,7 @@ const SilverWall: React.FC<{ sponsors: Sponsor[]; label: string }> = ({ sponsors
               <img
                 src={s.logo}
                 alt={s.name}
-                className="h-10 md:h-14 w-auto object-contain"
+                className="h-8 md:h-12 w-auto object-contain"
                 loading="lazy"
               />
             </SponsorLink>
