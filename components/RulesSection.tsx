@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ScrollText, Play, AlertCircle, Shield, Swords, Crown, Flame, Zap, Target, ChevronDown, User } from 'lucide-react';
+import { ScrollText, Play, AlertCircle, Shield, Swords, Crown, Flame, Zap, Target, ChevronDown } from 'lucide-react';
 import { useTranslation } from '../hooks/useTranslation';
 
 const RulesSection: React.FC = () => {
@@ -145,29 +145,16 @@ const RulesSection: React.FC = () => {
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 max-w-4xl mx-auto">
-                     {[1, 2, 3].map((i) => (
-                        <div key={i} className="group relative">
-                             {/* Card Frame */}
-                            <div className="aspect-[3/4] bg-neutral-800 rounded-lg border-2 border-dashed border-white/20 flex flex-col items-center justify-center relative overflow-hidden group-hover:border-tko-yellow group-hover:bg-neutral-800/80 transition-all duration-300">
-                                
-                                {/* Placeholder Icon */}
-                                <div className="bg-neutral-900 p-6 rounded-full mb-6 group-hover:scale-110 transition-transform duration-300">
-                                    <User className="w-16 h-16 text-gray-600 group-hover:text-tko-yellow transition-colors" />
-                                </div>
-                                
-                                {/* Text */}
-                                <span className="text-gray-500 font-heading font-bold text-xl uppercase tracking-widest group-hover:text-white transition-colors">
-                                    {t.rules.freestyle.judges.comingSoon}
-                                </span>
-                                
+                     {['DUCK', 'KOTA', 'NOB'].map((name) => (
+                        <div key={name} className="group relative">
+                            <div className="aspect-[3/4] bg-neutral-800 rounded-lg border-2 border-white/10 relative overflow-hidden group-hover:border-tko-yellow transition-all duration-300">
+                                <img
+                                    src={`./judges/${name}.jpg`}
+                                    alt={`裁判 ${name}`}
+                                    className="w-full h-full object-cover"
+                                />
                                 {/* Hover Effect Overlay */}
                                 <div className="absolute inset-0 bg-gradient-to-t from-tko-yellow/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
-                            </div>
-                            
-                            {/* Name Label Placeholder */}
-                            <div className="mt-4 text-center opacity-50">
-                                <div className="h-2 w-16 bg-gray-700 mx-auto rounded mb-2"></div>
-                                <div className="h-2 w-24 bg-gray-700 mx-auto rounded"></div>
                             </div>
                         </div>
                      ))}

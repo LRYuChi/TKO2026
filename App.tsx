@@ -6,6 +6,7 @@ import Registration from './components/Registration';
 import EventDetails from './components/EventDetails';
 import RulesSection from './components/RulesSection';
 // import Schedule from './components/Schedule';
+import Venue from './components/Venue';
 import Footer from './components/Footer';
 
 const AppContent: React.FC = () => {
@@ -27,6 +28,7 @@ const AppContent: React.FC = () => {
         <Registration />
         <RulesSection />
         {/* <Schedule /> */}
+        <Venue />
       </main>
       <Footer />
     </div>

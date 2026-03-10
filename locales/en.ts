@@ -4,6 +4,7 @@ export const en = {
     registration: 'Registration',
     rules: 'Rules',
     schedule: 'Schedule',
+    venue: 'Venue',
     registerNow: 'Register Now'
   },
   hero: {
@@ -316,5 +317,11 @@ export const en = {
     contact: 'Contact Us',
     followUs: 'Follow Us',
     rights: '© 2026 Taiwan Kendama Open. All rights reserved.'
+  },
+  venue: {
+    sectionLabel: 'Location',
+    title: 'Competition',
+    titleHighlight: 'Venue',
+    address: 'No. 99, Penglai Rd., Gushan Dist., Kaohsiung City 804'
   }
 };

@@ -4,6 +4,7 @@ export const zh = {
     registration: '報名資訊',
     rules: '賽制規則',
     schedule: '活動賽程',
+    venue: '比賽地點',
     registerNow: '立即報名'
   },
   hero: {
@@ -316,5 +317,11 @@ export const zh = {
     contact: '聯絡我們',
     followUs: '追蹤我們',
     rights: '© 2026 Taiwan Kendama Open. All rights reserved.'
+  },
+  venue: {
+    sectionLabel: 'Location',
+    title: '比賽',
+    titleHighlight: '地點',
+    address: '804高雄市鼓山區蓬萊路99號'
   }
 };
