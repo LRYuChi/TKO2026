@@ -1,6 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { ScrollText, Play, AlertCircle, Shield, Swords, Crown, Flame, Zap, Target, ChevronDown } from 'lucide-react';
 import { useTranslation } from '../hooks/useTranslation';
+import { AnimatePresence, motion, useInView } from 'framer-motion';
+import AnimatedSection from './AnimatedSection';
+import CountUp from 'react-countup';
+
+const ScoringPercent: React.FC<{ value: number; color: string }> = ({ value, color }) => {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true, amount: 0.5 });
+  return (
+    <div ref={ref} className={`text-7xl md:text-8xl font-heading font-extrabold ${color} mb-4 group-hover:scale-110 transition-transform origin-left numeric`}>
+      {isInView ? <CountUp end={value} duration={1.5} /> : '0'}%
+    </div>
+  );
+};
 
 const RulesSection: React.FC = () => {
   const { t } = useTranslation();
@@ -65,10 +78,20 @@ const RulesSection: React.FC = () => {
             </div>
 
             {/* Tab Content Area */}
-            <div className="animate-fade-in min-h-[400px]">
-                {activeTab === 'novice' && <NoviceRules />}
-                {activeTab === 'advanced' && <AdvancedRules />}
-                {activeTab === 'ken' && <KenGameRules />}
+            <div className="min-h-[400px]">
+                <AnimatePresence mode="wait">
+                    <motion.div
+                        key={activeTab}
+                        initial={{ opacity: 0, x: 30 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        exit={{ opacity: 0, x: -30 }}
+                        transition={{ duration: 0.3 }}
+                    >
+                        {activeTab === 'novice' && <NoviceRules />}
+                        {activeTab === 'advanced' && <AdvancedRules />}
+                        {activeTab === 'ken' && <KenGameRules />}
+                    </motion.div>
+                </AnimatePresence>
             </div>
         </div>
       </section>
@@ -98,21 +121,27 @@ const RulesSection: React.FC = () => {
 
             {/* Scoring Criteria */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
-                <div className="bg-neutral-900/50 p-10 border border-white/10 hover:border-tko-yellow/50 transition-colors group">
-                    <div className="text-7xl md:text-8xl font-heading font-extrabold text-tko-yellow mb-4 group-hover:scale-110 transition-transform origin-left numeric">{t.rules.freestyle.scoring.creativity.percent}</div>
-                    <div className="text-xl md:text-2xl text-white font-bold uppercase tracking-extra-wide mb-2">{t.rules.freestyle.scoring.creativity.title}</div>
-                    <p className="text-gray-400 text-sm md:text-base leading-relaxed">{t.rules.freestyle.scoring.creativity.desc}</p>
-                </div>
-                <div className="bg-neutral-900/50 p-10 border border-white/10 hover:border-tko-green/50 transition-colors group">
-                    <div className="text-7xl md:text-8xl font-heading font-extrabold text-tko-green mb-4 group-hover:scale-110 transition-transform origin-left numeric">{t.rules.freestyle.scoring.flow.percent}</div>
-                    <div className="text-xl md:text-2xl text-white font-bold uppercase tracking-extra-wide mb-2">{t.rules.freestyle.scoring.flow.title}</div>
-                    <p className="text-gray-400 text-sm md:text-base leading-relaxed">{t.rules.freestyle.scoring.flow.desc}</p>
-                </div>
-                <div className="bg-neutral-900/50 p-10 border border-white/10 hover:border-tko-red/50 transition-colors group">
-                    <div className="text-7xl md:text-8xl font-heading font-extrabold text-tko-red mb-4 group-hover:scale-110 transition-transform origin-left numeric">{t.rules.freestyle.scoring.difficulty.percent}</div>
-                    <div className="text-xl md:text-2xl text-white font-bold uppercase tracking-extra-wide mb-2">{t.rules.freestyle.scoring.difficulty.title}</div>
-                    <p className="text-gray-400 text-sm md:text-base leading-relaxed">{t.rules.freestyle.scoring.difficulty.desc}</p>
-                </div>
+                <AnimatedSection delay={0}>
+                  <div className="bg-neutral-900/50 p-10 border border-white/10 hover:border-tko-yellow/50 transition-colors group">
+                      <ScoringPercent value={30} color="text-tko-yellow" />
+                      <div className="text-xl md:text-2xl text-white font-bold uppercase tracking-extra-wide mb-2">{t.rules.freestyle.scoring.creativity.title}</div>
+                      <p className="text-gray-400 text-sm md:text-base leading-relaxed">{t.rules.freestyle.scoring.creativity.desc}</p>
+                  </div>
+                </AnimatedSection>
+                <AnimatedSection delay={0.15}>
+                  <div className="bg-neutral-900/50 p-10 border border-white/10 hover:border-tko-green/50 transition-colors group">
+                      <ScoringPercent value={40} color="text-tko-green" />
+                      <div className="text-xl md:text-2xl text-white font-bold uppercase tracking-extra-wide mb-2">{t.rules.freestyle.scoring.flow.title}</div>
+                      <p className="text-gray-400 text-sm md:text-base leading-relaxed">{t.rules.freestyle.scoring.flow.desc}</p>
+                  </div>
+                </AnimatedSection>
+                <AnimatedSection delay={0.3}>
+                  <div className="bg-neutral-900/50 p-10 border border-white/10 hover:border-tko-red/50 transition-colors group">
+                      <ScoringPercent value={30} color="text-tko-red" />
+                      <div className="text-xl md:text-2xl text-white font-bold uppercase tracking-extra-wide mb-2">{t.rules.freestyle.scoring.difficulty.title}</div>
+                      <p className="text-gray-400 text-sm md:text-base leading-relaxed">{t.rules.freestyle.scoring.difficulty.desc}</p>
+                  </div>
+                </AnimatedSection>
             </div>
 
             {/* Rules Format */}
@@ -145,18 +174,19 @@ const RulesSection: React.FC = () => {
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 max-w-4xl mx-auto">
-                     {['DUCK', 'KOTA', 'NOB'].map((name) => (
-                        <div key={name} className="group relative">
-                            <div className="aspect-[3/4] bg-neutral-800 rounded-lg border-2 border-white/10 relative overflow-hidden group-hover:border-tko-yellow transition-all duration-300">
-                                <img
-                                    src={`./judges/${name}.jpg`}
-                                    alt={`裁判 ${name}`}
-                                    className="w-full h-full object-cover"
-                                />
-                                {/* Hover Effect Overlay */}
-                                <div className="absolute inset-0 bg-gradient-to-t from-tko-yellow/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
-                            </div>
-                        </div>
+                     {['DUCK', 'KOTA', 'NOB'].map((name, idx) => (
+                        <AnimatedSection key={name} delay={idx * 0.15}>
+                          <div className="group relative">
+                              <div className="aspect-[3/4] bg-neutral-800 rounded-lg border-2 border-white/10 relative overflow-hidden group-hover:border-tko-yellow transition-all duration-300">
+                                  <img
+                                      src={`./judges/${name}.jpg`}
+                                      alt={`裁判 ${name}`}
+                                      className="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:brightness-105 transition-all duration-500"
+                                  />
+                                  <div className="absolute inset-0 bg-gradient-to-t from-tko-yellow/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+                              </div>
+                          </div>
+                        </AnimatedSection>
                      ))}
                 </div>
             </div>

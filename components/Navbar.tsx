@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import { Menu, X, Globe } from 'lucide-react';
 import { useTranslation } from '../hooks/useTranslation';
 import { LanguageContext } from '../contexts/LanguageContext';
+import { AnimatePresence, motion } from 'framer-motion';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -96,7 +97,7 @@ const Navbar: React.FC = () => {
             <a
               href="#registration"
               onClick={(e) => scrollToSection(e, 'registration')}
-              className="px-6 py-2 bg-tko-green hover:bg-green-700 text-white text-sm font-bold tracking-widest uppercase skew-x-[-10deg] transition-all transform hover:translate-y-[-2px] border-l-4 border-tko-yellow"
+              className="px-6 py-2 bg-tko-green hover:bg-green-700 text-white text-sm font-bold tracking-widest uppercase skew-x-[-10deg] transition-all transform hover:translate-y-[-2px] border-l-4 border-tko-yellow animate-pulse-glow"
             >
               <span className="block skew-x-[10deg]">{t.nav.registerNow}</span>
             </a>
@@ -115,42 +116,53 @@ const Navbar: React.FC = () => {
       </div>
 
       {/* Mobile Menu Panel */}
-      {isOpen && (
-        <div className="md:hidden bg-tko-black absolute w-full shadow-xl border-t border-gray-800">
-          <div className="px-4 pt-4 pb-6 space-y-2">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={`#${link.id}`}
-                onClick={(e) => scrollToSection(e, link.id)}
-                className="block px-3 py-4 text-base font-bold text-gray-300 hover:text-tko-yellow hover:bg-white/5 border-b border-white/5 last:border-0"
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.2 }}
+            className="md:hidden bg-tko-black absolute w-full shadow-xl border-t border-gray-800"
+          >
+            <div className="px-4 pt-4 pb-6 space-y-2">
+              {navLinks.map((link, i) => (
+                <motion.a
+                  key={link.name}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: i * 0.05 }}
+                  href={`#${link.id}`}
+                  onClick={(e) => scrollToSection(e, link.id)}
+                  className="block px-3 py-4 text-base font-bold text-gray-300 hover:text-tko-yellow hover:bg-white/5 border-b border-white/5 last:border-0"
+                >
+                  {link.name}
+                </motion.a>
+              ))}
+              <button
+                onClick={() => {
+                  toggleLanguage();
+                  setIsOpen(false);
+                }}
+                className="w-full flex items-center justify-center gap-2 px-3 py-4 text-base font-bold text-gray-300 hover:text-tko-yellow hover:bg-white/5 border-b border-white/5"
+                title="Switch Language"
               >
-                {link.name}
-              </a>
-            ))}
-            <button
-              onClick={() => {
-                toggleLanguage();
-                setIsOpen(false);
-              }}
-              className="w-full flex items-center justify-center gap-2 px-3 py-4 text-base font-bold text-gray-300 hover:text-tko-yellow hover:bg-white/5 border-b border-white/5"
-              title="Switch Language"
-            >
-              <Globe size={18} />
-              <span>{language === 'zh' ? 'EN' : '華'}</span>
-            </button>
-            <div className="pt-4">
-               <a
-                href="#registration"
-                onClick={(e) => scrollToSection(e, 'registration')}
-                className="block w-full text-center px-5 py-4 bg-tko-green text-white text-base font-bold hover:bg-green-700 uppercase tracking-widest"
-              >
-                {t.nav.registerNow}
-              </a>
+                <Globe size={18} />
+                <span>{language === 'zh' ? 'EN' : '華'}</span>
+              </button>
+              <div className="pt-4">
+                 <a
+                  href="#registration"
+                  onClick={(e) => scrollToSection(e, 'registration')}
+                  className="block w-full text-center px-5 py-4 bg-tko-green text-white text-base font-bold hover:bg-green-700 uppercase tracking-widest"
+                >
+                  {t.nav.registerNow}
+                </a>
+              </div>
             </div>
-          </div>
-        </div>
-      )}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 };

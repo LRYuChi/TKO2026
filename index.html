@@ -126,6 +126,41 @@
         background: #FF9B24;
         color: #121212;
       }
+
+      /* Animations */
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      .animate-fade-in { animation: fadeIn 0.5s ease-out forwards; }
+
+      @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fade-in-up { animation: fadeInUp 0.8s ease-out forwards; }
+
+      @keyframes pulse-glow {
+        0%, 100% { box-shadow: 0 0 8px rgba(0, 138, 64, 0.4); }
+        50% { box-shadow: 0 0 20px rgba(0, 138, 64, 0.6); }
+      }
+      .animate-pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
+
+      @keyframes shimmer {
+        0% { background-position: -200% 0; }
+        100% { background-position: 200% 0; }
+      }
+
+      /* Reduced motion support */
+      @media (prefers-reduced-motion: reduce) {
+        .animate-fade-in,
+        .animate-fade-in-up,
+        .animate-pulse-glow {
+          animation: none !important;
+          opacity: 1 !important;
+          transform: none !important;
+        }
+      }
     </style>
   </head>
   <body class="bg-tko-black text-white antialiased">

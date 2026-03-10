@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { LanguageProvider, LanguageContext } from './contexts/LanguageContext';
+import ScrollProgress from './components/ScrollProgress';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Registration from './components/Registration';
@@ -21,6 +22,7 @@ const AppContent: React.FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col font-sans antialiased">
+      <ScrollProgress />
       <Navbar />
       <main className="flex-grow">
         <Hero />
