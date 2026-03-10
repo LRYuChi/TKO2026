@@ -177,11 +177,11 @@ const RulesSection: React.FC = () => {
                      {['DUCK', 'KOTA', 'NOB'].map((name, idx) => (
                         <AnimatedSection key={name} delay={idx * 0.15}>
                           <div className="group relative">
-                              <div className="aspect-[3/4] bg-neutral-800 rounded-lg border-2 border-white/10 relative overflow-hidden group-hover:border-tko-yellow transition-all duration-300">
+                              <div className="bg-neutral-800 rounded-lg border-2 border-white/10 relative overflow-hidden group-hover:border-tko-yellow transition-all duration-300">
                                   <img
                                       src={`./judges/${name}.jpg`}
                                       alt={`裁判 ${name}`}
-                                      className="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:brightness-105 transition-all duration-500"
+                                      className="w-full h-auto object-contain grayscale-[30%] group-hover:grayscale-0 group-hover:brightness-105 transition-all duration-500"
                                   />
                                   <div className="absolute inset-0 bg-gradient-to-t from-tko-yellow/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
                               </div>

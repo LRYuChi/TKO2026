@@ -53,11 +53,11 @@ const Venue: React.FC = () => {
 
           {/* Venue Photo */}
           <AnimatedSection direction="right">
-            <div className="aspect-[4/3] rounded-lg overflow-hidden border border-white/10 bg-neutral-800 group">
+            <div className="rounded-lg overflow-hidden border border-white/10 bg-neutral-800 group flex items-center">
               <img
                 src="./venue/—Pngtree—run_787544.jpg"
                 alt="比賽場地"
-                className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500"
+                className="w-full h-auto object-contain group-hover:scale-[1.03] transition-transform duration-500"
                 loading="lazy"
               />
             </div>

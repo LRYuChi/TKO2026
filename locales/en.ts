@@ -372,7 +372,6 @@ export const en = {
     title: 'FAQ',
     items: [
       { q: 'How do I get to the venue?', a: 'The venue is at No. 99, Penglai Rd., Gushan District, Kaohsiung. Take the Kaohsiung MRT to Yanchengpu or Sizihwan Station, then walk about 10 minutes. Paid parking is available nearby.' },
-      { q: 'Do I need to bring my own kendama?', a: 'Yes, players must bring their own kendama. Competition-grade kendama (JKA certified or equivalent) is required for Designated and Speed events. Freestyle has no restrictions.' },
       { q: 'Can I register on-site?', a: 'We recommend registering online in advance. On-site registration may be available if spots remain.' },
       { q: 'Is there an age limit?', a: 'No age limit! All kendama enthusiasts are welcome. Participants under 12 are encouraged to be accompanied by a guardian.' },
       { q: 'Is lunch provided?', a: 'Meals are not included in the registration fee. There are many restaurants and food stalls near the venue.' },
