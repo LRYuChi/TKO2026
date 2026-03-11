@@ -176,6 +176,20 @@ html.lang-en p { letter-spacing: 0.005em; }
   pointer-events: none;
 }
 
+/* ===== Platinum Logo Glow (for dark logos on dark bg) ===== */
+.platinum-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background: radial-gradient(ellipse, rgba(255,255,255,0.08) 0%, transparent 70%);
+}
+
+.platinum-logo img {
+  filter: drop-shadow(0 0 12px rgba(255,255,255,0.15));
+}
+
 /* ===== Gold Sponsor Card ===== */
 .gold-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -194,7 +208,7 @@ html.lang-en p { letter-spacing: 0.005em; }
 
 .silver-marquee {
   display: flex;
-  gap: 3rem;
+  gap: 4rem;
   animation: marquee 35s linear infinite;
   width: max-content;
 }

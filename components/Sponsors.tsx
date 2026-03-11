@@ -1,7 +1,6 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React from 'react';
 import { useTranslation } from '../hooks/useTranslation';
 import AnimatedSection from './AnimatedSection';
-import { AnimatePresence, motion } from 'framer-motion';
 
 interface Sponsor {
   name: string;
@@ -10,92 +9,50 @@ interface Sponsor {
   desc?: string;
 }
 
-/* ─── Platinum Carousel ─── */
-const PlatinumCarousel: React.FC<{ sponsors: Sponsor[]; label: string }> = ({ sponsors, label }) => {
-  const [current, setCurrent] = useState(0);
-  const [paused, setPaused] = useState(false);
-
-  const next = useCallback(() => {
-    setCurrent((i) => (i + 1) % sponsors.length);
-  }, [sponsors.length]);
-
-  useEffect(() => {
-    if (paused || sponsors.length <= 1) return;
-    const timer = setInterval(next, 5000);
-    return () => clearInterval(timer);
-  }, [paused, next, sponsors.length]);
-
+/* ─── Platinum Stack ─── */
+const PlatinumStack: React.FC<{ sponsors: Sponsor[]; label: string }> = ({ sponsors, label }) => {
   if (!sponsors.length) return null;
-
-  const sponsor = sponsors[current];
-  const hasDesc = sponsor.desc && sponsor.desc.trim().length > 0;
 
   return (
     <div className="mb-16">
-      <p className="text-tko-yellow/50 text-xs font-mono tracking-[0.3em] uppercase mb-6">{label}</p>
-
-      <div
-        className="platinum-card rounded-xl p-10 md:p-16 min-h-[240px] flex flex-col justify-center"
-        onMouseEnter={() => setPaused(true)}
-        onMouseLeave={() => setPaused(false)}
-      >
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={current}
-            initial={{ opacity: 0, x: 40 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -40 }}
-            transition={{ duration: 0.5, ease: 'easeInOut' }}
-          >
-            <SponsorLink
-              url={sponsor.url}
-              className={`flex items-center gap-10 md:gap-16 ${hasDesc ? 'flex-col md:flex-row' : 'flex-col justify-center'}`}
-            >
-              <div className={`shrink-0 flex items-center justify-center ${hasDesc ? 'w-full md:w-auto' : 'w-full'}`}>
-                <img
-                  src={sponsor.logo}
-                  alt={sponsor.name}
-                  className={`w-auto object-contain drop-shadow-[0_0_20px_rgba(255,155,36,0.15)] ${
-                    hasDesc
-                      ? 'h-24 md:h-36 max-w-[280px] md:max-w-[360px]'
-                      : 'h-28 md:h-40 max-w-[320px] md:max-w-[440px]'
+      <p className="text-sm md:text-base font-bold text-white/80 tracking-[0.3em] uppercase mb-8">{label}</p>
+      <div className="flex flex-col gap-6">
+        {sponsors.map((s, i) => {
+          const hasDesc = s.desc && s.desc.trim().length > 0;
+          return (
+            <AnimatedSection key={i} delay={i * 0.08}>
+              <div className="platinum-card rounded-xl p-8 md:p-12">
+                <SponsorLink
+                  url={s.url}
+                  className={`flex items-center gap-8 md:gap-12 ${
+                    hasDesc ? 'flex-col md:flex-row' : 'flex-col justify-center'
                   }`}
-                  loading="lazy"
-                />
+                >
+                  <div className="platinum-logo shrink-0">
+                    <img
+                      src={s.logo}
+                      alt={s.name}
+                      className={`w-auto object-contain ${
+                        hasDesc
+                          ? 'h-28 md:h-40 max-w-[320px] md:max-w-[420px]'
+                          : 'h-32 md:h-44 max-w-[360px] md:max-w-[480px]'
+                      }`}
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className={`${hasDesc ? 'text-center md:text-left flex-1' : 'text-center'}`}>
+                    <h4 className="text-white text-lg md:text-2xl font-bold drop-shadow-[0_0_10px_rgba(255,155,36,0.3)]">
+                      {s.name}
+                    </h4>
+                    {hasDesc && (
+                      <p className="text-gray-400 text-sm md:text-base leading-relaxed mt-3">{s.desc}</p>
+                    )}
+                  </div>
+                </SponsorLink>
               </div>
-              {hasDesc ? (
-                <div className="text-center md:text-left flex-1">
-                  <h4 className="text-white text-xl md:text-2xl font-bold mb-3 drop-shadow-[0_0_10px_rgba(255,155,36,0.3)]">
-                    {sponsor.name}
-                  </h4>
-                  <p className="text-gray-400 text-sm md:text-base leading-relaxed">{sponsor.desc}</p>
-                </div>
-              ) : (
-                <p className="text-white/70 text-sm font-mono tracking-[0.2em] uppercase drop-shadow-[0_0_8px_rgba(255,155,36,0.2)]">
-                  {sponsor.name}
-                </p>
-              )}
-            </SponsorLink>
-          </motion.div>
-        </AnimatePresence>
-
-        {/* Bar indicators */}
-        {sponsors.length > 1 && (
-          <div className="flex justify-center gap-2 mt-10">
-            {sponsors.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => setCurrent(i)}
-                aria-label={`Go to sponsor ${i + 1}`}
-                className={`h-1 rounded-full transition-all duration-400 ${
-                  i === current
-                    ? 'bg-tko-yellow w-8'
-                    : 'bg-white/20 hover:bg-white/40 w-4'
-                }`}
-              />
-            ))}
-          </div>
-        )}
+            </AnimatedSection>
+          );
+        })}
       </div>
     </div>
   );
@@ -107,7 +64,7 @@ const GoldGrid: React.FC<{ sponsors: Sponsor[]; label: string }> = ({ sponsors, 
 
   return (
     <div className="mb-16">
-      <p className="text-tko-yellow/60 text-xs font-mono tracking-[0.3em] uppercase mb-6">{label}</p>
+      <p className="text-sm md:text-base font-bold text-tko-yellow/80 tracking-[0.3em] uppercase mb-8">{label}</p>
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
         {sponsors.map((s, i) => (
           <AnimatedSection key={i} delay={i * 0.05}>
@@ -136,13 +93,12 @@ const GoldGrid: React.FC<{ sponsors: Sponsor[]; label: string }> = ({ sponsors, 
 const SilverMarquee: React.FC<{ sponsors: Sponsor[]; label: string }> = ({ sponsors, label }) => {
   if (!sponsors.length) return null;
 
-  // Double the array for seamless loop
   const doubled = [...sponsors, ...sponsors];
 
   return (
     <div>
-      <p className="text-white/30 text-xs font-mono tracking-[0.3em] uppercase mb-6">{label}</p>
-      <div className="overflow-hidden rounded-lg py-6 bg-white/[0.02]">
+      <p className="text-sm md:text-base font-bold text-white/50 tracking-[0.3em] uppercase mb-8">{label}</p>
+      <div className="overflow-hidden rounded-lg py-8 md:py-10 bg-white/[0.02]">
         <div className="silver-marquee">
           {doubled.map((s, i) => (
             <SponsorLink
@@ -153,7 +109,7 @@ const SilverMarquee: React.FC<{ sponsors: Sponsor[]; label: string }> = ({ spons
               <img
                 src={s.logo}
                 alt={s.name}
-                className="h-10 md:h-14 w-auto object-contain"
+                className="h-14 md:h-20 w-auto object-contain"
                 loading="lazy"
               />
             </SponsorLink>
@@ -219,9 +175,7 @@ const Sponsors: React.FC = () => {
         </AnimatedSection>
 
         {/* Tiers */}
-        <AnimatedSection>
-          <PlatinumCarousel sponsors={platinum} label={t.sponsors.platinumLabel} />
-        </AnimatedSection>
+        <PlatinumStack sponsors={platinum} label={t.sponsors.platinumLabel} />
 
         {platinum.length > 0 && gold.length > 0 && <TierDivider />}
 

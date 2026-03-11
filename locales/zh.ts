@@ -321,9 +321,9 @@ export const zh = {
   sponsors: {
     sectionLabel: 'PARTNERS',
     title: '合作夥伴',
-    platinumLabel: '✦ 白金贊助 PLATINUM',
-    goldLabel: '金級贊助 GOLD',
-    silverLabel: '銀級贊助 SILVER',
+    platinumLabel: '✦ PLATINUM PARTNERS',
+    goldLabel: 'GOLD PARTNERS',
+    silverLabel: 'SILVER PARTNERS',
     platinum: [
       { name: 'SFP', logo: './sponsors/platinum/200510_SFP-Sticker.png', desc: '' },
       { name: 'Bill Boque', logo: './sponsors/platinum/Bill Boque.png', desc: '' },

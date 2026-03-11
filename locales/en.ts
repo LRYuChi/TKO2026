@@ -321,9 +321,9 @@ export const en = {
   sponsors: {
     sectionLabel: 'PARTNERS',
     title: 'Our Partners',
-    platinumLabel: '✦ PLATINUM PARTNER',
-    goldLabel: 'GOLD PARTNER',
-    silverLabel: 'SILVER PARTNER',
+    platinumLabel: '✦ PLATINUM PARTNERS',
+    goldLabel: 'GOLD PARTNERS',
+    silverLabel: 'SILVER PARTNERS',
     platinum: [
       { name: 'SFP', logo: './sponsors/platinum/200510_SFP-Sticker.png', desc: '' },
       { name: 'Bill Boque', logo: './sponsors/platinum/Bill Boque.png', desc: '' },
