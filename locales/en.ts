@@ -330,7 +330,7 @@ export const en = {
       { name: 'GLOKEN', logo: './sponsors/platinum/GLOKEN.png', desc: '' },
       { name: 'JAC Kendama', logo: './sponsors/platinum/JAC Kendama.png', desc: '' },
       { name: 'Kendama Co', logo: './sponsors/platinum/Kendama Co.png', desc: '' },
-      { name: 'TAHZAN', logo: './sponsors/platinum/NS_踏山TAHZAN_Logo-OG4.png', desc: '' },
+      { name: 'TAHZAN Kendama', logo: './sponsors/platinum/NS_踏山TAHZAN_Logo-OG4.png', desc: '' },
       { name: 'Sol Kendamas', logo: './sponsors/platinum/Sol Kendamas .png', desc: '' },
       { name: 'Sweets Kendamas', logo: './sponsors/platinum/Sweets Kendamas.png', desc: '' },
       { name: 'One More Shot Studio', logo: './sponsors/platinum/再一顆影像.png', desc: '' },

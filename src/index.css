@@ -136,6 +136,21 @@ html.lang-en p { letter-spacing: 0.005em; }
   color: #121212;
 }
 
+/* ===== Tier Label Shimmer Text ===== */
+@keyframes text-shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.tier-label-shimmer {
+  background: linear-gradient(90deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0.7) 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: text-shimmer 4s linear infinite;
+}
+
 /* ===== Platinum Sponsor Shimmer Border ===== */
 @keyframes shimmer-border {
   0% { background-position: -200% center; }
@@ -279,5 +294,10 @@ html.lang-en p { letter-spacing: 0.005em; }
     flex-wrap: wrap;
     width: auto;
     justify-content: center;
+  }
+  .tier-label-shimmer {
+    animation: none;
+    color: rgba(255,255,255,0.8);
+    background: none;
   }
 }

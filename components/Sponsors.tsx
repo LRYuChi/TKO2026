@@ -9,13 +9,34 @@ interface Sponsor {
   desc?: string;
 }
 
-/* ─── Platinum Stack ─── */
-const PlatinumStack: React.FC<{ sponsors: Sponsor[]; label: string }> = ({ sponsors, label }) => {
+/* ─── Tier Label ─── */
+const TierLabel: React.FC<{ text: string; variant: 'platinum' | 'gold' | 'silver' }> = ({ text, variant }) => {
+  const styles = {
+    platinum: { text: 'tier-label-shimmer', line: 'bg-white/40' },
+    gold: { text: 'text-tko-yellow', line: 'bg-tko-yellow' },
+    silver: { text: 'text-white/60', line: 'bg-white/30' },
+  };
+  const s = styles[variant];
+
+  return (
+    <AnimatedSection direction="left">
+      <div className="flex items-center gap-4 mb-8">
+        <div className={`h-[2px] w-10 ${s.line}`} />
+        <p className={`text-base md:text-lg font-bold tracking-[0.3em] uppercase ${s.text}`}>
+          {text}
+        </p>
+      </div>
+    </AnimatedSection>
+  );
+};
+
+/* ─── Platinum Grid ─── */
+const PlatinumGrid: React.FC<{ sponsors: Sponsor[]; label: string }> = ({ sponsors, label }) => {
   if (!sponsors.length) return null;
 
   return (
     <div className="mb-16">
-      <p className="text-sm md:text-base font-bold text-white/80 tracking-[0.3em] uppercase mb-8">{label}</p>
+      <TierLabel text={label} variant="platinum" />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {sponsors.map((s, i) => {
           const hasDesc = s.desc && s.desc.trim().length > 0;
@@ -58,7 +79,7 @@ const GoldGrid: React.FC<{ sponsors: Sponsor[]; label: string }> = ({ sponsors, 
 
   return (
     <div className="mb-16">
-      <p className="text-sm md:text-base font-bold text-tko-yellow/80 tracking-[0.3em] uppercase mb-8">{label}</p>
+      <TierLabel text={label} variant="gold" />
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
         {sponsors.map((s, i) => (
           <AnimatedSection key={i} delay={i * 0.05}>
@@ -93,14 +114,14 @@ const SilverMarquee: React.FC<{ sponsors: Sponsor[]; label: string }> = ({ spons
 
   return (
     <div>
-      <p className="text-sm md:text-base font-bold text-white/50 tracking-[0.3em] uppercase mb-8">{label}</p>
+      <TierLabel text={label} variant="silver" />
       <div className="overflow-hidden rounded-lg py-8 md:py-10 bg-white/[0.02]">
         <div className="silver-marquee">
           {doubled.map((s, i) => (
             <SponsorLink
               key={i}
               url={s.url}
-              className="shrink-0 block opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300"
+              className="shrink-0 block opacity-80 hover:opacity-100 transition-all duration-300"
             >
               <img
                 src={s.logo}
@@ -171,7 +192,7 @@ const Sponsors: React.FC = () => {
         </AnimatedSection>
 
         {/* Tiers */}
-        <PlatinumStack sponsors={platinum} label={t.sponsors.platinumLabel} />
+        <PlatinumGrid sponsors={platinum} label={t.sponsors.platinumLabel} />
 
         {platinum.length > 0 && gold.length > 0 && <TierDivider />}
 
