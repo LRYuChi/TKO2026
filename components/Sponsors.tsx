@@ -16,36 +16,30 @@ const PlatinumStack: React.FC<{ sponsors: Sponsor[]; label: string }> = ({ spons
   return (
     <div className="mb-16">
       <p className="text-sm md:text-base font-bold text-white/80 tracking-[0.3em] uppercase mb-8">{label}</p>
-      <div className="flex flex-col gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {sponsors.map((s, i) => {
           const hasDesc = s.desc && s.desc.trim().length > 0;
           return (
-            <AnimatedSection key={i} delay={i * 0.08}>
-              <div className="platinum-card rounded-xl p-8 md:p-12">
+            <AnimatedSection key={i} delay={i * 0.06}>
+              <div className="platinum-card rounded-xl p-6 md:p-8 h-full">
                 <SponsorLink
                   url={s.url}
-                  className={`flex items-center gap-8 md:gap-12 ${
-                    hasDesc ? 'flex-col md:flex-row' : 'flex-col justify-center'
-                  }`}
+                  className="flex flex-col items-center justify-center gap-5 h-full"
                 >
                   <div className="platinum-logo shrink-0">
                     <img
                       src={s.logo}
                       alt={s.name}
-                      className={`w-auto object-contain ${
-                        hasDesc
-                          ? 'h-28 md:h-40 max-w-[320px] md:max-w-[420px]'
-                          : 'h-32 md:h-44 max-w-[360px] md:max-w-[480px]'
-                      }`}
+                      className="h-24 md:h-32 w-auto max-w-[260px] md:max-w-[340px] object-contain"
                       loading="lazy"
                     />
                   </div>
-                  <div className={`${hasDesc ? 'text-center md:text-left flex-1' : 'text-center'}`}>
-                    <h4 className="text-white text-lg md:text-2xl font-bold drop-shadow-[0_0_10px_rgba(255,155,36,0.3)]">
+                  <div className="text-center">
+                    <h4 className="text-white text-base md:text-lg font-bold drop-shadow-[0_0_10px_rgba(255,155,36,0.3)]">
                       {s.name}
                     </h4>
                     {hasDesc && (
-                      <p className="text-gray-400 text-sm md:text-base leading-relaxed mt-3">{s.desc}</p>
+                      <p className="text-gray-400 text-sm leading-relaxed mt-2">{s.desc}</p>
                     )}
                   </div>
                 </SponsorLink>
@@ -70,14 +64,16 @@ const GoldGrid: React.FC<{ sponsors: Sponsor[]; label: string }> = ({ sponsors, 
           <AnimatedSection key={i} delay={i * 0.05}>
             <SponsorLink
               url={s.url}
-              className="gold-card group flex flex-col items-center justify-center bg-gradient-to-b from-neutral-900 to-neutral-900/60 border-2 border-tko-yellow/30 rounded-xl p-5 md:p-7 hover:border-tko-yellow aspect-[4/3] relative overflow-hidden"
+              className="gold-card group flex flex-col items-center justify-center bg-gradient-to-b from-neutral-900 to-neutral-900/60 rounded-xl p-5 md:p-7 aspect-[4/3]"
             >
-              <img
-                src={s.logo}
-                alt={s.name}
-                className="h-14 md:h-20 w-auto max-w-full object-contain transition-all duration-300"
-                loading="lazy"
-              />
+              <div className="gold-logo">
+                <img
+                  src={s.logo}
+                  alt={s.name}
+                  className="h-14 md:h-20 w-auto max-w-full object-contain transition-all duration-300"
+                  loading="lazy"
+                />
+              </div>
               <p className="absolute bottom-3 left-0 right-0 text-center text-white/0 group-hover:text-white/70 text-xs font-mono tracking-wider uppercase transition-all duration-300 translate-y-2 group-hover:translate-y-0">
                 {s.name}
               </p>
